@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /d/Development/PLAIOS-1/ | grep -v \"^d.*\\\\.$\")",
+      "Bash(git config:*)",
+      "WebFetch(domain:www.anthropic.com)",
+      "Bash(find /d/Development/PLAIOS-1 -type f \\\\\\( -name \"*mcp*\" -o -name \"*claude_desktop*\" -o -name \"*.ts\" -o -name \"*.js\" -o -name \"package.json\" -o -name \"tsconfig*\" \\\\\\) 2>/dev/null | head -20)"
+    ]
+  }
+}

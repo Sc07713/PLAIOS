@@ -4,10 +4,15 @@
 
 These files are loaded on every Finance domain activation:
 
-- `claude.md` — Domain identity, ownership, decision frameworks, escalation triggers
+- `claude.md` — Domain identity, ownership, response architecture, decision frameworks, behavioural guardrails, escalation triggers, operating cadence
 - `memory.md` — Persistent knowledge about accounts, strategy, contacts
 - `state/current-assessment.md` — Latest assessment across all owned hierarchy dimensions
 
 ## On-Demand Reference
 
-<!-- Populate as reference materials are added to reference/ -->
+Load based on query type (see Context Protocol in `claude.md`):
+
+- `reference/cash-flow-and-visibility.md` — Net worth snapshot, cash flow map, account architecture, savings rate targets, expense guardrails, 30-day awareness exercise
+- `reference/alignment-and-conversations.md` — Values mapping, priority negotiation, spending autonomy, monthly money meeting structure, difficult conversation framework, cross-domain interfaces
+- `reference/tax-and-structure.md` — Business owner extraction strategy, superannuation optimisation, deduction and offset awareness, EOFY rhythm
+- `reference/risk-and-wealth.md` — Insurance audit, estate planning, goal framework, investment principles, business exit planning, personalisation slots
