@@ -16,3 +16,5 @@ Load based on query type (see Context Protocol in `claude.md`):
 - `reference/alignment-and-conversations.md` — Values mapping, priority negotiation, spending autonomy, monthly money meeting structure, difficult conversation framework, cross-domain interfaces
 - `reference/tax-and-structure.md` — Business owner extraction strategy, superannuation optimisation, deduction and offset awareness, EOFY rhythm
 - `reference/risk-and-wealth.md` — Insurance audit, estate planning, goal framework, investment principles, business exit planning, personalisation slots
+- `reference/tooling-research-personal-finance-apps.md` — Evaluation of Firefly III, Actual Budget, GnuCash, Ghostfolio for self-hosted personal finance
+- `reference/ai-cfo-architecture-research.md` — Architecture research for AI-powered Household CFO: data structuring, proactive monitoring, scenario modelling, privacy, build sequence
