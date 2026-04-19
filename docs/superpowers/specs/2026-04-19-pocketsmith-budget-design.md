@@ -117,9 +117,11 @@ Note: Hillside minimum repayment is assumed equal to rent ($2,200/mo) — the re
 
 | Line | Amount | Cadence | Category |
 |---|---|---|---|
-| Harmoney loan repayment | TBD from history | Monthly until end date | Loan Repayment (or TBD) |
-| Ambulance Victoria | TBD ($) | Yearly | Insurance (placeholder event) |
-| Land insurance | TBD ($) | Yearly | Insurance (placeholder event) |
+| Harmoney loan repayment | $165.55/fortnight (≈$358.69/mo) | Fortnightly, next due 2026-04-24, direct debit from acct ending 7233 | Loan Repayment |
+
+**Deferred:** Ambulance Victoria and Land insurance — yearly amounts unknown. Not added in this rebuild. To be created as new events when their next bill arrives and the actual amount is known.
+
+**Harmoney additional context:** Loan account is offline (cannot sync to PocketSmith). Original amount $20,075 over 7 years at 9.79%, current balance $19,851.28 (loan started recently, very early in term). Only the cashflow event lives in PocketSmith; the loan balance is manually tracked as an offline asset. Spreadsheet's $386.28/mo figure is incorrect — actual is $358.69/mo (correct conversion of $165.55 × 26/12).
 
 ## Income Events
 
@@ -137,7 +139,7 @@ Total forecast income: **~$17,736/mo**.
 ### Phase 1 — Discovery (read-only)
 
 1. Pull last 7 months of interest charges per loan account → calculate average monthly interest per property → use as the Interest event amount for each mortgage.
-2. Pull last 6 months of Harmoney repayments → confirm $386/mo and identify loan end date.
+2. ~~Pull Harmoney repayment history~~ — confirmed manually 2026-04-19: $165.55/fortnight, next 2026-04-24, debit from acct 7233. No Phase 1 work needed.
 3. Inventory the 31 existing default budget events with their IDs and full JSON for snapshotting.
 4. Confirm category IDs for every target category. Identify any new sub-categories needed (e.g. "Water" if separate tracking from Power is wanted; otherwise consolidate under Power for utility bills).
 
@@ -168,9 +170,8 @@ Phase 2 (delete) is the only destructive step. The Phase 2 snapshot file is the 
 
 ## Open Items / TBD
 
-- **Ambulance Victoria** — yearly amount unknown, will be placeholder event with note "TBD: confirm at next renewal"
-- **Land insurance** — yearly amount unknown, will be placeholder event
-- **Harmoney loan end date** — derive from history during Phase 1
+- **Ambulance Victoria** — deferred; create event when next bill arrives with actual amount
+- **Land insurance** — deferred; create event when next bill arrives with actual amount
 - **Insurance billing cadence** — most insurance lines may be yearly, not monthly; will check transaction history during Phase 1 to set correct cadence and renewal dates
 - **Water sub-category** — Greater Western Water bills currently land in Power; decide during Phase 1 whether to create a Water sub-category or accept consolidation
 
