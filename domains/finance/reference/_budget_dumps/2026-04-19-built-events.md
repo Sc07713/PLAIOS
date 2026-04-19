@@ -1,11 +1,13 @@
 # Built Events (2026-04-19 PocketSmith Budget Rebuild)
 
+> **Updated 2026-04-19 (late that day):** Insurance lines recalibrated from Virgin card actuals; 2 landlord-insurance placeholders added. Medibank +$31, BD Car +$10, BD Sassafras +$94, BD Park View +$85, Pet -$42 (possibly yearly, not monthly). Net +$378/mo insurance vs prior budget. 34 active series (was 32).
+
 > **Updated 2026-04-19 (later that day):** Replaced 6 mortgage events (Interest+Principal split) with 3 full-repayment events. Reason: dashboard psychology — interest visibility was making the budget look perpetually negative. Interest still tracked automatically on loan accounts.
 
 > **Updated 2026-04-19 (earlier):** Monthly events backdated to 2026-04-01 to make current-month budget visible. Quarterly/yearly/fortnightly events unchanged.
 
 Wipe: 31 default event instances (30 unique series + 1 missed series 423106459) deleted.
-Build: 35 new series created across Tasks 3–12. Then 6 mortgage split events deleted and replaced with 3 full-repayment events (net: 32 active series).
+Build: 35 new series created across Tasks 3–12. Mortgage split events collapsed to 3 full-repayment events (−3); insurance recalibration added 2 landlord placeholders (+2). Net: 34 active series.
 
 | event_id | series_id | category_id | category_title | scenario_id | scenario_title | amount | cadence | note |
 |---|---|---|---|---|---|---|---|---|
@@ -21,11 +23,13 @@ Build: 35 new series created across Tasks 3–12. Then 6 mortgage split events d
 | 423632839-1784073600 | 423632839 | 31156959 | Education | 5009794 | Complete Access | -370.00 | quarterly (monthly/3) | MIC Basketball training — Audrey ($370/term x 4 terms/yr) |
 | 423632843-1784073600 | 423632843 | 31156959 | Education | 5009794 | Complete Access | -240.00 | quarterly (monthly/3) | Salesian guitar lessons — Wulfric ($240/term x 4 terms/yr) |
 | 423647039-1775001600 | 423647039 | 31172219 | Child Care | 5009794 | Complete Access | -764.00 | monthly | Little Lane childcare — Penny (4 days/week) |
-| 423647043-1775001600 | 423647043 | 31172234 | Insurance | 5009794 | Complete Access | -252.00 | monthly | Medibank Private Health Insurance (monthly placeholder; switch to annual cadence at next renewal) |
-| 423647071-1775001600 | 423647071 | 31172234 | Insurance | 5009794 | Complete Access | -140.00 | monthly | Budget Direct — car insurance (monthly placeholder; likely yearly — confirm at next renewal) |
-| 423647075-1775001600 | 423647075 | 31172234 | Insurance | 5009794 | Complete Access | -83.00 | monthly | Budget Direct — Sassafras Drive building insurance (monthly placeholder; likely yearly — confirm at renewal) |
-| 423647103-1775001600 | 423647103 | 31172234 | Insurance | 5009794 | Complete Access | -70.00 | monthly | Budget Direct — 18 Park View Tce building insurance (monthly placeholder; likely yearly — confirm at renewal) |
-| 423647111-1775001600 | 423647111 | 31172234 | Insurance | 5009794 | Complete Access | -50.00 | monthly | Pet insurance — Titus |
+| 423647043-1775001600 | 423647043 | 31172234 | Insurance | 5009794 | Complete Access | -283.00 | monthly | Medibank Private Health (family). Calibrated from Virgin actuals: fortnightly $130.54 (new rate Apr 2026). |
+| 423647071-1775001600 | 423647071 | 31172234 | Insurance | 5009794 | Complete Access | -150.00 | monthly | Budget Direct — car insurance. Calibrated from Virgin actuals: fortnightly $69.21. |
+| 423647075-1775001600 | 423647075 | 31172234 | Insurance | 5009794 | Complete Access | -177.00 | monthly | Budget Direct — Sassafras building. Calibrated from Virgin actuals: fortnightly $81.90 × 26/12. Spreadsheet's $83 was actually the per-fortnight figure, not monthly. |
+| 423647103-1775001600 | 423647103 | 31172234 | Insurance | 5009794 | Complete Access | -155.00 | monthly | Budget Direct — Park View building. Calibrated from Virgin actuals (repriced Mar 2026; was $139/mo). Does NOT include landlord cover. |
+| 423647111-1775001600 | 423647111 | 31172234 | Insurance | 5009794 | Complete Access | -8.00 | monthly | Pet insurance — Titus. Reduced from $50 placeholder to ~$90/yr annualised. Single $89.95 debit Mar-02 — needs verification. Consider self-insured alternative. |
+| 423732399-1775001600 | 423732399 | 31172234 | Insurance | 5009794 | Complete Access | -100.00 | monthly | Landlord insurance — 18 Park View Tce (PLACEHOLDER; not yet in force). Update once quote obtained. |
+| 423732403-1775001600 | 423732403 | 31172234 | Insurance | 5009794 | Complete Access | -100.00 | monthly | Landlord insurance — Hillside/Celendine (PLACEHOLDER; not yet in force). Update once quote obtained. |
 | 423632871-1782864000 | 423632871 | 31227443 | Water | 5009794 | Complete Access | -540.00 | quarterly (monthly/3) | Greater Western Water — 18 Park View Tce (quarterly bill) |
 | 423632875-1782864000 | 423632875 | 31227443 | Water | 5009794 | Complete Access | -540.00 | quarterly (monthly/3) | Greater Western Water — Sassafras Drive (quarterly bill) |
 | 423647119-1775001600 | 423647119 | 31172214 | Power | 5009794 | Complete Access | -200.00 | monthly | Momentum Energy — electricity |
@@ -60,7 +64,7 @@ Build: 35 new series created across Tasks 3–12. Then 6 mortgage split events d
 | Harmoney | $4,304 | 165.55 × 26 fortnightly payments |
 | Education | $27,604 | Termly + monthly items per plan |
 | Child Care | $9,168 | 764 × 12 |
-| Insurance | $7,140 | 595 × 12 |
+| Insurance | $11,676 | (283+150+177+155+8+100+100) × 12 — recalibrated from Virgin actuals + 2 landlord placeholders |
 | Power | $5,184 | (200 + 232) × 12 |
 | Water | $4,320 | (540 + 540) × 4 quarters |
 | Phone | $1,680 | (20 + 120) × 12 |

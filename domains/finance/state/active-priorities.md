@@ -10,7 +10,9 @@
 - **Rent-to-offset restructure** — planned cash-flow redirection so all rental income funnels into ANZ One Offset. User-led. Validate in mid-May with a clean month of data.
 - **Chase Rinoa for ~$800 Celendine April rent** — Mina actioning.
 - **Discretionary baseline conversation with Mina** — after 3 months of post-rule actuals (target: 2026-08), measure what discretionary actually looks like with the no-eating-out rule in place. The BNPL discovery validates that the gap was already real; the 3 months tells us what the "honest" steady-state is.
-- **Mortgage interest recalibration** — re-pull from transaction history quarterly (next: 2026-07-19); offset balance changes will move interest down over time. Park View interest flagged specifically — irregular billing cadence, $3,100 event may need adjusting vs $3,277 avg.
+- **Mortgage interest recalibration** — interest no longer broken out as separate events post-restructure (2026-04-19). Quarterly pull from loan account transaction history gives the equivalent info without bloating the budget view.
+- **Landlord insurance quotes** — neither investment property currently has landlord cover (building insurance exists, but not rent-loss/tenant-damage cover). Two $100/mo placeholder events live in PocketSmith. Action: get 3 quotes (specialists EBM & Terri Scheer, plus a bundling quote from whoever covers the building). Priority: Park View first (rental stream at risk), Hillside second.
+- **Insurance bundling review** — Medibank stays put, but 4 Budget Direct policies + 2 landlord policies = potential 10-15% multi-policy discount from a single bundled provider. Worth quoting at next renewal window.
 
 ## Blocked
 
