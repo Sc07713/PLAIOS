@@ -2,14 +2,16 @@
 
 ## Current Focus
 
-- **BNPL paydown ($6,270 across 3 accounts)** — GEM by Latitude $4,010, ZipPlus $1,877, PayPal Pay in 4 $383. Discovered 2026-04-19 as historic discretionary overspend (mostly eating out; GEM is Mina's overspending residue). Repayments ~$300/mo combined from Virgin Go Account. **Household rule live: no eating out** until cleared. Decide paydown order (avalanche by interest rate, or snowball — PayPal first as fastest psychological win then Zip then GEM) at next Mina conversation.
+- **Korea trip funding (priority over BNPL paydown until August)** — Flights paid ($3K for 6 return). Remaining: accom ~$3K + food/transport/extras ~$4.5-8K = **~$7.5-11K total**. 4-month surplus capacity is ~$5,800, so trip funding takes priority over aggressive BNPL paydown. Recommended path: **Path B — clear PayPal ($383) for a quick win in month 1, route remaining surplus to Korea trip fund until August.** BNPL's GEM + ZipPlus carry until post-trip; cost is ~$300-400 of interest on GEM over 4 months, acceptable.
+- **Build Korea trip budget in PocketSmith** — Rename one of the empty savings accounts (candidate: Virgin Boost Saver 5011814) to "Korea Trip 2026", set up automatic monthly transfer of the agreed amount from Complete Access. Needs itinerary review to pin exact monthly figure.
 - **Transaction backlog cleanup** — 2,687 uncategorised + 6,739 needs-review. Strategy: pull top 30 payees, build category rules, apply retroactively.
+- **BNPL paydown (deferred to post-Korea)** — $6,270 across 3 accounts. After PayPal clearing in month 1, rest waits until September 2026 (post-trip). Full paydown expected by end 2026 / early 2027. Household rule **no eating out** remains live throughout — it's what keeps the cycle from restarting.
 
 ## Queued
 
 - **Rent-to-offset restructure** — planned cash-flow redirection so all rental income funnels into ANZ One Offset. User-led. Validate in mid-May with a clean month of data.
 - **Chase Rinoa for ~$800 Celendine April rent** — Mina actioning.
-- **Korea trip budget** — major discretionary event August 2026. Build a separate trip budget in PocketSmith before departure (flights, accommodation, food, activities, spending money). Aim to have BNPL cleared before trip so paydown and trip funding don't compete.
+- **Korea itinerary review next session** — user will share itinerary to sharpen food/transport/activities estimate from ranges to real numbers. Informs the monthly trip-fund transfer amount and refines BNPL vs trip split.
 - **Discretionary baseline conversation with Mina** — revised target 2026-09 (post-Korea). The May-July window is the clean baseline (no eating out, no trip); August breaks it; September-onwards is steady-state. Post-trip review compares the three phases.
 - **Reinstate loan interest tracking in PocketSmith** — deliberately removed 2026-04-19 for dashboard readability. Reinstate after the Korea trip once the discretionary baseline is settled; will give a fuller net-worth / true-cost view at that point.
 - **Mortgage interest recalibration** — interest no longer broken out as separate events post-restructure (2026-04-19). Quarterly pull from loan account transaction history gives the equivalent info without bloating the budget view.
