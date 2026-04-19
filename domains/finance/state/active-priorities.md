@@ -2,13 +2,14 @@
 
 ## Current Focus
 
-- **Transaction backlog cleanup** — 2,687 uncategorised + 6,739 needs-review. Strategy: pull top 30 payees, build category rules, apply retroactively. Next session.
+- **BNPL paydown ($6,270 across 3 accounts)** — GEM by Latitude $4,010, ZipPlus $1,877, PayPal Pay in 4 $383. Discovered 2026-04-19 as historic discretionary overspend (mostly eating out; GEM is Mina's overspending residue). Repayments ~$300/mo combined from Virgin Go Account. **Household rule live: no eating out** until cleared. Decide paydown order (avalanche by interest rate, or snowball — PayPal first as fastest psychological win then Zip then GEM) at next Mina conversation.
+- **Transaction backlog cleanup** — 2,687 uncategorised + 6,739 needs-review. Strategy: pull top 30 payees, build category rules, apply retroactively.
 
 ## Queued
 
 - **Rent-to-offset restructure** — planned cash-flow redirection so all rental income funnels into ANZ One Offset. User-led. Validate in mid-May with a clean month of data.
 - **Chase Rinoa for ~$800 Celendine April rent** — Mina actioning.
-- **Discretionary baseline conversation with Mina** — after 3 months of post-rebuild actuals (target: 2026-08), pull a spreadsheet-vs-actuals diff per category, surface real discretionary spend with evidence, propose a discretionary budget structure for negotiation.
+- **Discretionary baseline conversation with Mina** — after 3 months of post-rule actuals (target: 2026-08), measure what discretionary actually looks like with the no-eating-out rule in place. The BNPL discovery validates that the gap was already real; the 3 months tells us what the "honest" steady-state is.
 - **Mortgage interest recalibration** — re-pull from transaction history quarterly (next: 2026-07-19); offset balance changes will move interest down over time. Park View interest flagged specifically — irregular billing cadence, $3,100 event may need adjusting vs $3,277 avg.
 
 ## Blocked
