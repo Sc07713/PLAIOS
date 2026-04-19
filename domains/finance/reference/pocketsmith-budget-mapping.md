@@ -1,6 +1,6 @@
 # PocketSmith Budget — Mapping & Provenance
 
-**Last rebuilt:** 2026-04-19
+**Last rebuilt:** 2026-04-19 (mortgage restructure later same day)
 **Source:** `mckennie-household-budget.xlsx` (sheet: 2026 Forecast v2)
 **Design spec:** `docs/superpowers/specs/2026-04-19-pocketsmith-budget-design.md`
 **Implementation plan:** `docs/superpowers/plans/2026-04-19-pocketsmith-budget-rebuild.md`
@@ -11,41 +11,34 @@ PocketSmith is now the source of truth for committed household cashflow. The spr
 
 ## How to interpret the numbers
 
-**Loan Interest events live on loan account scenarios** — they will NOT appear in the standard PocketSmith expense dashboard or budget summary for the Complete Access scenario. To see total household interest cost ($88,800/yr), query the Loan Interest category directly across all scenarios, or look at each loan scenario individually.
+**Mortgage events show the full cash repayment** — each monthly event equals the exact amount leaving the bank account. The bank automatically allocates between interest and principal on its side. Interest will still post as bank charges on each loan account in PocketSmith — no separate budget event needed.
 
-**Loan Repayment (principal) events are on the Complete Access operating scenario** and are NOT marked as transfers in PocketSmith (that is a future refinement). They DO show as expenses. The net effect is correct: cash leaves the operating account and reduces the loan balance.
+**Why simpler now:** The original build modelled Interest and Principal as separate events (6 events across 3 properties). While technically accurate, the Interest events on loan scenarios caused the dashboard to display ~$88,800/yr as an apparent expense, making the budget perpetually look like a loss. The interest cost is real — but it is already visible on each loan account as bank-posted charges. Forecasting it as a separate budget line adds psychological noise without adding information. The 3 full-repayment events show the real cash commitment without the double-count.
 
-**The model will appear "expense heavy"** because the same mortgage repayment dollar shows up in two places:
-- As an interest cost on the loan account scenario (economic cost of debt)
-- As a principal expense on the operating account scenario (cash leaving to reduce balance)
-
-Total cash leaving operating accounts per mortgage each month = interest event + principal event combined. This is accurate cashflow modelling — it just requires knowing which layer you are looking at.
+**Interest visibility after this change:** Interest charges will continue to appear on each loan account in PocketSmith as actual bank transactions. You can see total interest cost by viewing the Loan Interest category in transaction history, or by checking each loan account directly. The budget forecast now shows cash flow only.
 
 **Spreadsheet vs. reality corrections made during this rebuild:**
 - Sassafras and Park View repayment amounts were SWAPPED in the spreadsheet. Bank actuals: Sassafras = $2,550/mo, Park View = $3,822/mo.
 - Hillside total repayment is $2,928/mo — NOT $2,200/mo. The $2,200 is the rent income that partially offsets it; there is a ~$728/mo gap funded from operating cash.
 - The spreadsheet's "$800 extra Hillside" line was a misread of the operating cash top-up needed to cover that gap — not extra principal repayment. No separate Hillside-extra event exists in the live model.
-- The spreadsheet was claiming +$22,925/yr surplus before discretionary. The corrected model shows approximately **-$13,784/yr cash flow after interest, before discretionary**, offset by ~$22,800/yr principal/equity gain.
+- After restructure, April 2026 budget forecast: income $18,036/mo, expenses $16,748.55/mo, surplus ~$1,287/mo.
 
 ---
 
 ## Mortgage events (per property)
 
-For each property, two events exist:
-- **Interest** event on the loan account scenario — category `Loan Interest` (id 31204939) — economic cost of debt, calibrated from 7-month transaction history
-- **Principal** event on the Complete Access scenario — category `Loan Repayment` (id 31156839) — cash leaving operating account for debt reduction
+Restructured 2026-04-19: 6 split events (Interest + Principal per property) replaced with 3 single full-repayment events, all on Complete Access (5009794), category Loan Repayment (31156839).
 
-| Property | Total repayment | Interest event ID | Interest amount | Principal event ID | Principal amount | Interest scenario | Principal scenario |
-|---|---|---|---|---|---|---|---|
-| Sassafras Drive (PPOR) | $2,550/mo | 423646903 | $1,982/mo | 423646919 | $568/mo | Variable Home Loan (5011759) | Complete Access (5009794) |
-| Park View Tce, Sydenham | $3,822/mo | 423646911 | $3,100/mo | 423647011 | $722/mo | Residential Investment Loan (5011769) | Complete Access (5009794) |
-| Hillside, Celendine (combined) | $2,928/mo | 423646915 | $2,318/mo | 423647015 | $610/mo | Residential Investment Loan (5011749) | Complete Access (5009794) |
+| Property | Monthly repayment | Event ID | Scenario | Notes |
+|---|---|---|---|---|
+| Sassafras Drive (PPOR) | $2,550/mo | 423715719 | Complete Access (5009794) | Interest ~$1,982 + principal ~$568. Bank allocates automatically. |
+| Park View Tce, Sydenham | $3,822/mo | 423715723 | Complete Access (5009794) | Interest ~$3,100 + principal ~$722. Rent income ($2,040/mo) partially offsets. |
+| Hillside, Celendine | $2,928/mo | 423715727 | Complete Access (5009794) | Interest ~$2,318 + principal ~$610. Rent income ($2,200/mo) partially offsets; ~$728/mo gap from operating cash. |
 
-**Notes on mortgage amounts:**
-- Sassafras: 7-month avg interest $1,981.84/mo; rounded to $1,982. Principal = $2,550 − $1,982 = $568.
-- Park View: 6-charge avg $3,277 but irregular billing cadence; $3,100 used (recent median, better reflects current run rate). Principal = $3,822 − $3,100 = $722. Flag for recalibration at next quarterly review (2026-07-19).
-- Hillside: 7-month avg interest $2,317.84/mo; rounded to $2,318. Principal = $2,928 − $2,318 = $610. Rent income ($2,200/mo from Rinoa + Sam + Mina's mum) partially offsets repayment; ~$728/mo gap funded from operating cash.
-- ANZ product labelling anomaly: PPOR Sassafras is on a product labelled "Residential Investment Loan" and vice versa — flag for accountant at EOFY for interest deductibility review.
+**Interest breakdown (for reference — not budget events):**
+- Sassafras: interest ~$1,982/mo (7-month avg $1,981.84). Interest deductible check: flag for EOFY accountant — ANZ product labelling anomaly (PPOR on product labelled "Residential Investment Loan").
+- Park View: interest ~$3,100/mo (recent median; 6-charge avg was $3,277 but irregular cadence). Flag for recalibration 2026-07-19.
+- Hillside: interest ~$2,318/mo (7-month avg $2,317.84).
 
 ---
 
@@ -93,6 +86,8 @@ For each property, two events exist:
 
 ## Annual budget headline (2027 full year — first complete year with all events active)
 
+> Revised after 2026-04-19 mortgage restructure. Full repayments replace split Interest+Principal events.
+
 | Line | Annual | Notes |
 |---|---|---|
 | Scott salary | $96,000 | $8,000 × 12 |
@@ -100,8 +95,9 @@ For each property, two events exist:
 | Park View rent | $24,480 | $2,040 × 12 |
 | Hillside rent | $26,400 | $2,200 × 12 |
 | **Total income** | **$212,832** | Confirmed by PocketSmith summary |
-| Loan Interest (3 properties) | $88,800 | (1,982 + 3,100 + 2,318) × 12 — on loan scenarios, excluded from PS budget summary |
-| Loan Repayment (principal, 3 mortgages) | $22,800 | (568 + 722 + 610) × 12 |
+| Loan Repayment — Sassafras | $30,600 | $2,550 × 12 |
+| Loan Repayment — Park View | $45,864 | $3,822 × 12 |
+| Loan Repayment — Hillside | $35,136 | $2,928 × 12 |
 | Harmoney | $4,304 | $165.55 × 26 fortnightly |
 | Education | $27,604 | Termly + monthly items |
 | Child Care | $9,168 | $764 × 12 |
@@ -111,8 +107,10 @@ For each property, two events exist:
 | Phone | $1,680 | ($20 + $120) × 12 |
 | Government Services | $6,296 | $840 + ($460 + $654) × 4 |
 | Groceries | $12,000 | $1,000 × 12 |
-| **Total expenses (excl. interest)** | **$100,496** | Principal + all other committed costs |
-| **Cash flow after interest, before discretionary** | **~-$13,784** | Income $212,832 − expenses $100,496 − interest $88,800 — offset by ~$22,800 principal/equity gain |
+| **Total expenses** | **$189,296** | Full mortgage repayments included — dashboard shows positive surplus |
+| **Surplus (before discretionary)** | **~$23,536** | Income $212,832 − expenses $189,296 |
+
+> The surplus ($23,536/yr ≈ $1,961/mo) is cash flow after all mortgage repayments. Of the $111,600/yr in repayments, ~$88,800 is interest (a real cost) and ~$22,800 builds equity. Dashboard is now psychologically accurate — positive because cash inflows exceed committed outflows.
 
 Discretionary spending (eating out, fuel, clothing, travel, entertainment, gifts, kids one-offs) is NOT yet modelled. The August 2026 review with Mina is the target for adding this layer with 3 months of actuals as evidence.
 

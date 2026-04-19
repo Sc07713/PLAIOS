@@ -1,18 +1,17 @@
 # Built Events (2026-04-19 PocketSmith Budget Rebuild)
 
-> **Updated 2026-04-19:** Monthly events backdated to 2026-04-01 to make current-month budget visible. Quarterly/yearly/fortnightly events unchanged.
+> **Updated 2026-04-19 (later that day):** Replaced 6 mortgage events (Interest+Principal split) with 3 full-repayment events. Reason: dashboard psychology — interest visibility was making the budget look perpetually negative. Interest still tracked automatically on loan accounts.
+
+> **Updated 2026-04-19 (earlier):** Monthly events backdated to 2026-04-01 to make current-month budget visible. Quarterly/yearly/fortnightly events unchanged.
 
 Wipe: 31 default event instances (30 unique series + 1 missed series 423106459) deleted.
-Build: 35 new series created across Tasks 3–12.
+Build: 35 new series created across Tasks 3–12. Then 6 mortgage split events deleted and replaced with 3 full-repayment events (net: 32 active series).
 
 | event_id | series_id | category_id | category_title | scenario_id | scenario_title | amount | cadence | note |
 |---|---|---|---|---|---|---|---|---|
-| 423646903-1775001600 | 423646903 | 31204939 | Loan Interest | 5011759 | Variable Home Loan (Sassafras) | -1982.00 | monthly | Sassafras Drive — interest portion of repayment (PPOR). Calibrated from 7-month avg ($1,981.84/mo). |
-| 423646911-1775001600 | 423646911 | 31204939 | Loan Interest | 5011769 | Residential Investment Loan (Park View) | -3100.00 | monthly | 18 Park View Terrace, Sydenham — interest portion of repayment (investment). Recent charge median $3,100 used (6-charge avg was $3,277 but cadence is irregular; $3,100 better reflects current run rate). |
-| 423646915-1775001600 | 423646915 | 31204939 | Loan Interest | 5011749 | Residential Investment Loan (Hillside) | -2318.00 | monthly | Hillside (Celendine) — interest portion of repayment. Calibrated from 7-month avg ($2,317.84/mo). Bank-mandated repayment partially funded by tenant rent. |
-| 423646919-1775001600 | 423646919 | 31156839 | Loan Repayment | 5009794 | Complete Access | -568.00 | monthly | Sassafras Drive — principal portion of $2,550/mo repayment (PPOR). Total repayment $2,550 minus interest $1,982. |
-| 423647011-1775001600 | 423647011 | 31156839 | Loan Repayment | 5009794 | Complete Access | -722.00 | monthly | 18 Park View Terrace, Sydenham — principal portion of $3,822/mo repayment (investment). Total repayment $3,822 minus interest $3,100. |
-| 423647015-1775001600 | 423647015 | 31156839 | Loan Repayment | 5009794 | Complete Access | -610.00 | monthly | Hillside (Celendine) — principal portion of $2,928/mo repayment. Total repayment $2,928 minus interest $2,318. Rent income ($2,200/mo) partially offsets full repayment. |
+| 423715719-1775001600 | 423715719 | 31156839 | Loan Repayment | 5009794 | Complete Access | -2550.00 | monthly | Sassafras Drive — full mortgage repayment (PPOR). Includes interest + principal; bank automatically allocates. Interest charges visible on the loan account. |
+| 423715723-1775001600 | 423715723 | 31156839 | Loan Repayment | 5009794 | Complete Access | -3822.00 | monthly | 18 Park View Tce, Sydenham — full mortgage repayment (investment). Includes interest + principal. |
+| 423715727-1775001600 | 423715727 | 31156839 | Loan Repayment | 5009794 | Complete Access | -2928.00 | monthly | Hillside (Celendine) — full mortgage repayment. Includes interest + principal. Rent income $2,200/mo partially offsets this. Loan balance includes top-up that funded Sassafras acquisition. |
 | 423632815-1784073600 | 423632815 | 31156959 | Education | 5009794 | Complete Access | -2898.00 | quarterly (monthly/3) | Salesian College — Wulfric term fees ($11,590/yr / 4 terms) |
 | 423632819-1784073600 | 423632819 | 31156959 | Education | 5009794 | Complete Access | -1005.00 | quarterly (monthly/3) | Holy Trinity — Audrey & Evie term fees ($4,020/yr / 4 terms) |
 | 423647019-1775001600 | 423647019 | 31156959 | Education | 5009794 | Complete Access | -434.00 | monthly | Music Education Academy — Wulfric, Audrey, Evie monthly fee |
@@ -50,13 +49,14 @@ Build: 35 new series created across Tasks 3–12.
 
 ## Annual budget forecast (2027 full year — clean year with all events active)
 
+> Revised after mortgage restructure. Interest now absorbed into full repayment events; no separate interest lines.
+
 | Category | Annual total | Basis |
 |---|---|---|
 | Income (salary) | $212,832 | (8,000 + 5,496) × 12 — confirmed by PocketSmith summary |
 | Rentals income | $51,480 | (2,040 + 2,200) × 12 |
 | **Total income** | **$264,312** | |
-| Loan Interest | $88,800 | (1,982 + 3,100 + 2,318) × 12 — on loan scenarios, excluded from PS budget summary |
-| Loan Repayment (principal) | $22,800 | (568 + 722 + 610) × 12 |
+| Loan Repayment (full — 3 mortgages) | $111,600 | (2,550 + 3,822 + 2,928) × 12. Includes both interest and principal; bank allocates automatically. |
 | Harmoney | $4,304 | 165.55 × 26 fortnightly payments |
 | Education | $27,604 | Termly + monthly items per plan |
 | Child Care | $9,168 | 764 × 12 |
@@ -66,9 +66,10 @@ Build: 35 new series created across Tasks 3–12.
 | Phone | $1,680 | (20 + 120) × 12 |
 | Government Services | $6,296 | 840 + (460 + 654) × 4 |
 | Groceries | $12,000 | 1,000 × 12 |
-| **Total expenses** | **~$189,296** | Excl. mortgage interest |
-| **Surplus (excl. interest)** | **~$75,016** | Income - expenses excl. interest |
-| **Surplus (incl. interest)** | **~-$13,784** | After interest cost — offset by principal equity gain |
+| **Total expenses** | **~$189,296** | Full mortgage repayments included |
+| **Surplus** | **~$75,016** | Income minus all expenses — dashboard shows positive |
+
+> Note: The surplus ($75k/yr) represents cash flow after all mortgage repayments, not net wealth gain. The interest component of repayments (~$88,800/yr) is an expense; the principal component (~$22,800/yr) builds equity. True cash cost is identical to before — only the presentation changed.
 
 ## Notes for Task 14
 
