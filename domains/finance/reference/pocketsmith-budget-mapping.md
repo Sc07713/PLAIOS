@@ -25,92 +25,84 @@ PocketSmith is now the source of truth for committed household cashflow. The spr
 
 ---
 
-## Mortgage events (per property)
+## Consolidated household budget events (rebuilt 2026-04-24)
 
-Restructured 2026-04-19: 6 split events (Interest + Principal per property) replaced with 3 single full-repayment events, all on Complete Access (5009794), category Loan Repayment (31156839).
+**Architecture change 2026-04-24:** Per user direction, restructured to **one event per category**. All household events now consolidated to a single line per category, all on Scott's Complete Access (5009794). Trade-off: per-account scenario forecasting becomes inaccurate (CA shows over-positive flow because Mina salary + Park View rent are budgeted there but actually land in Go Account); household totals are correct. Granular line items (per-property mortgage breakdown, individual insurance policies, termly school fees) are no longer separately tracked in events — see notes below for breakdowns.
 
-| Property | Monthly repayment | Event ID | Scenario | Notes |
-|---|---|---|---|---|
-| Sassafras Drive (PPOR) | $2,550/mo | 423715719 | Complete Access (5009794) | Interest ~$1,982 + principal ~$568. Bank allocates automatically. |
-| Park View Tce, Sydenham | $3,822/mo | 423715723 | Complete Access (5009794) | Interest ~$3,100 + principal ~$722. Rent income ($2,040/mo) partially offsets. |
-| Hillside, Celendine | $2,928/mo | 423715727 | Complete Access (5009794) | Interest ~$2,318 + principal ~$610. Rent income ($2,200/mo) partially offsets; ~$728/mo gap from operating cash. |
+| # | Category | Cat ID | Amount | Cadence | Event ID | Notes |
+|---|---|---|---:|---|---|---|
+| 1 | Income | 31156879 | +$13,496 | monthly | 425545919 | Scott $8,000 + Mina $5,496 |
+| 2 | Rentals | 31172254 | +$4,240 | monthly | 425545923 | Hillside $2,200 + Park View $2,040 |
+| 3 | Mortgage Repayments | 31156984 | -$9,300 | monthly | 425545927 | Sassafras $2,550 + Park View $3,822 + Hillside $2,928 |
+| 4 | Loan Repayments | 31156839 | -$358 | monthly | 425545935 | Harmoney only ($165.55/fortnight). Add BNPL paydown events when scheduled. |
+| 5 | Education | 31156959 | -$2,300 | monthly | 425545939 | Annualised: monthly $796 (Music $434, JETS $61×2, Wulfric Boxing $240) + termly $1,504/mo amortised (Salesian $2,898/q, Holy Trinity $1,005/q, MIC $370/q, Salesian guitar $240/q). Total $27,604/yr ÷ 12. |
+| 6 | Child Care | 31172219 | -$764 | monthly | 423647039 | Little Lane (Penny, 4 days/week). KEPT from earlier build. |
+| 7 | Insurance | 31172234 | -$973 | monthly | 425545943 | Medibank $283 + car $150 + Sassafras bldg $177 + Park View bldg $155 + pet $8 + 2 landlord placeholders $100 each. Recalibrate when actual landlord quotes obtained. |
+| 8 | Power | 31172214 | -$432 | monthly | 425545947 | Momentum: electricity $200 + gas $232 |
+| 9 | Phone | 31172239 | -$140 | monthly | 425545951 | Wulfric $20 + Mina $120 |
+| 10 | Water | 31227443 | -$360 | monthly | 425545955 | Quarterly $1,080 amortised. Park View + Sassafras Greater Western Water |
+| 11 | Groceries | 31156854 | -$1,000 | monthly | 423647147 | Committed baseline. KEPT from earlier build. |
+| 12 | Government Services | 31156989 | -$441 | monthly | 425545963 | Annualised: Brimbank Council $460/q + Hume Council $654/q ($371/mo) + VicRoads rego $840/yr ($70/mo). |
+| 13 | Pets | 31172249 | -$100 | monthly | 425545967 | Titus food/vet placeholder. Pet insurance is in Insurance line. |
+| 14 | Land Tax | 31229295 | -$300 | monthly | 425545975 | Placeholder. Update when next assessment arrives. |
+| 15 | Basketball | 31229271 | -$250 | monthly | 425545983 | Kids basketball commitments combined. |
 
-**Interest breakdown (for reference — not budget events):**
-- Sassafras: interest ~$1,982/mo (7-month avg $1,981.84). Interest deductible check: flag for EOFY accountant — ANZ product labelling anomaly (PPOR on product labelled "Residential Investment Loan").
-- Park View: interest ~$3,100/mo (recent median; 6-charge avg was $3,277 but irregular cadence). Flag for recalibration 2026-07-19.
-- Hillside: interest ~$2,318/mo (7-month avg $2,317.84).
+## Korea trip events (one-off, Travel category 31172244)
 
----
+| Line | Date | Amount | Event ID |
+|---|---|---:|---|
+| Accommodation | 2026-07-01 | -$3,556 | 425545991 |
+| Activities | 2026-08-21 | -$1,704 | 425545999 |
+| Food | 2026-08-21 | -$3,081 | 425546003 |
+| Transport | 2026-08-21 | -$1,573 | 425546011 |
+| Misc/Shopping | 2026-08-21 | -$1,885 | 425546019 |
+| **Total** | | **-$11,799** | |
 
-## Non-mortgage events
+Includes 30% buffer per user direction. Flights ($3,000) already paid Apr 2026, not in forecast.
 
-| Spreadsheet line | Category | Category ID | Cadence | Amount | Event ID | Scenario |
-|---|---|---|---|---|---|---|
-| Salesian College fees (Wulfric) | Education | 31156959 | termly (quarterly) | $2,898 | 423632815 | Complete Access (5009794) |
-| Holy Trinity fees (Audrey & Evie) | Education | 31156959 | termly (quarterly) | $1,005 | 423632819 | Complete Access (5009794) |
-| Music Education Academy | Education | 31156959 | monthly | $434 | 423647019 | Complete Access (5009794) |
-| Audrey basketball JETS | Education | 31156959 | monthly | $61 | 423647023 | Complete Access (5009794) |
-| Evie basketball JETS | Education | 31156959 | monthly | $61 | 423647027 | Complete Access (5009794) |
-| Wulfric Boxing / Jujitsu | Education | 31156959 | monthly | $240 | 423647035 | Complete Access (5009794) |
-| MIC Basketball training (Audrey) | Education | 31156959 | termly (quarterly) | $370 | 423632839 | Complete Access (5009794) |
-| Salesian guitar lessons (Wulfric) | Education | 31156959 | termly (quarterly) | $240 | 423632843 | Complete Access (5009794) |
-| Little Lane childcare (Penny) | Child Care | 31172219 | monthly | $764 | 423647039 | Complete Access (5009794) |
-| Medibank Private Health | Insurance | 31172234 | monthly* | $252 | 423647043 | Complete Access (5009794) |
-| Budget Direct — car | Insurance | 31172234 | monthly* | $140 | 423647071 | Complete Access (5009794) |
-| Budget Direct — Sassafras building | Insurance | 31172234 | monthly* | $83 | 423647075 | Complete Access (5009794) |
-| Budget Direct — Park View building | Insurance | 31172234 | monthly* | $70 | 423647103 | Complete Access (5009794) |
-| Pet insurance — Titus | Insurance | 31172234 | monthly | $50 | 423647111 | Complete Access (5009794) |
-| Greater Western Water (Park View) | Water | 31227443 | quarterly | $540 | 423632871 | Complete Access (5009794) |
-| Greater Western Water (Sassafras) | Water | 31227443 | quarterly | $540 | 423632875 | Complete Access (5009794) |
-| Momentum Energy — electricity | Power | 31172214 | monthly | $200 | 423647119 | Complete Access (5009794) |
-| Momentum Energy — gas | Power | 31172214 | monthly | $232 | 423647127 | Complete Access (5009794) |
-| Wulfric mobile | Phone | 31172239 | monthly | $20 | 423647135 | Complete Access (5009794) |
-| Mina mobile | Phone | 31172239 | monthly | $120 | 423647139 | Complete Access (5009794) |
-| VicRoads rego | Government Services | 31156989 | yearly | $840 | 423632903 | Complete Access (5009794) |
-| Brimbank Council rates (Park View) | Government Services | 31156989 | quarterly | $460 | 423632915 | Complete Access (5009794) |
-| Hume City Council rates (Sassafras) | Government Services | 31156989 | quarterly | $654 | 423632919 | Complete Access (5009794) |
-| Groceries | Groceries | 31156854 | monthly | $1,000 | 423647147 | Complete Access (5009794) |
-| Harmoney repayment (home reno) | Loan Repayment | 31156839 | fortnightly | $165.55 | 423632927 | Complete Access (5009794) |
-| Scott salary | Income | 31156879 | monthly | $8,000 | 423647151 | Complete Access (5009794) |
-| Mina salary | Income | 31156879 | monthly | $5,496 | 423647155 | Go Account / Mina (5011809) |
-| Park View rent (Sydenham) | Rentals | 31172254 | monthly | $2,040 | 423647163 | Westpac Choice (5019943) |
-| Hillside rent (Celendine) | Rentals | 31172254 | monthly | $2,200 | 423647167 | Complete Access (5009794) |
+## Mortgage detail (interest breakdown — for reference, not budget events)
 
-*Insurance monthly placeholders — switch to actual yearly cadence and renewal date when next bill arrives.
+The consolidated $9,300/mo Mortgage Repayments event covers:
+- Sassafras Drive (PPOR): $2,550/mo total = ~$1,982 interest + ~$568 principal. EOFY flag: ANZ product labelling anomaly (PPOR on product labelled "Residential Investment Loan").
+- Park View Tce, Sydenham (investment): $3,822/mo total = ~$3,100 interest + ~$722 principal. Rent ($2,040/mo) partially offsets. Recalibration 2026-07-19.
+- Hillside, Celendine (investment, partial family rent): $2,928/mo total = ~$2,318 interest + ~$610 principal. Rent ($2,200/mo) partially offsets; ~$728/mo gap from operating cash.
 
-**Note on Mina's salary scenario:** At build time, Mina's pay was placed on the Go Account scenario (5011809) as the best available match. Confirm landing account once a clean pay cycle is visible in PocketSmith, and relocate event if needed.
+Interest charges still post on each loan account in PocketSmith as actual bank transactions — visible per-property in the loan account history. Total interest cost ~$88,800/yr; principal paydown ~$22,800/yr.
 
-**Note on Park View rent scenario:** Lands in the brand-new Westpac Choice account (5019943, opened 2026-04-19 by Mina). Relocate event post-restructure when rent funnels to ANZ One Offset.
+## Architectural notes
+
+- **Mina's Complete Access (4852629, scenario 5009809):** to be closed by Mina. Some user-created events landed here pre-rebuild — all relocated/deleted 2026-04-24.
+- **Mina's Go Account (4854564, scenario 5011809):** receives Mina's salary + Park View rent in real life. Budget treats household as one pool, so these are consolidated to Complete Access in events. When Mina closes the second CA, only the Go Account remains as her side.
+- **Cash flow accuracy:** Single-account scenario forecasts will be misleading until rent→offset restructure happens. Household total remains correct.
 
 ---
 
-## Annual budget headline (2027 full year — first complete year with all events active)
+## Annual budget headline (post 2026-04-24 consolidation)
 
-> Revised after 2026-04-19 mortgage restructure. Full repayments replace split Interest+Principal events.
+| Line | Monthly | Annual | Notes |
+|---|---:|---:|---|
+| Income | $13,496 | $161,952 | Scott + Mina |
+| Rentals | $4,240 | $50,880 | Both properties |
+| **Total inflows** | **$17,736** | **$212,832** | |
+| Mortgage Repayments | $9,300 | $111,600 | Full cash repayment, all 3 loans |
+| Education (annualised) | $2,300 | $27,600 | Monthly + termly amortised |
+| Groceries | $1,000 | $12,000 | |
+| Insurance | $973 | $11,676 | All policies + landlord placeholders |
+| Child Care | $764 | $9,168 | |
+| Government Services | $441 | $5,292 | Council rates + rego amortised |
+| Power | $432 | $5,184 | Gas + electricity |
+| Loan Repayments | $358 | $4,296 | Harmoney only |
+| Water | $360 | $4,320 | Quarterly amortised |
+| Land Tax | $300 | $3,600 | Placeholder |
+| Basketball | $250 | $3,000 | |
+| Phone | $140 | $1,680 | |
+| Pets | $100 | $1,200 | |
+| **Total expenses** | **$16,718** | **$200,616** | |
+| **Surplus (before discretionary)** | **~$1,018** | **~$12,216** | |
+| Korea trip 2026 | -$11,799 (Jul/Aug only) | -$11,799 | One-off |
+| **12-month net (with Korea)** | | **~$417** | Razor-thin |
 
-| Line | Annual | Notes |
-|---|---|---|
-| Scott salary | $96,000 | $8,000 × 12 |
-| Mina salary | $65,952 | $5,496 × 12 |
-| Park View rent | $24,480 | $2,040 × 12 |
-| Hillside rent | $26,400 | $2,200 × 12 |
-| **Total income** | **$212,832** | Confirmed by PocketSmith summary |
-| Loan Repayment — Sassafras | $30,600 | $2,550 × 12 |
-| Loan Repayment — Park View | $45,864 | $3,822 × 12 |
-| Loan Repayment — Hillside | $35,136 | $2,928 × 12 |
-| Harmoney | $4,304 | $165.55 × 26 fortnightly |
-| Education | $27,604 | Termly + monthly items |
-| Child Care | $9,168 | $764 × 12 |
-| Insurance | $7,140 | $595 × 12 |
-| Power | $5,184 | ($200 + $232) × 12 |
-| Water | $4,320 | ($540 + $540) × 4 quarters |
-| Phone | $1,680 | ($20 + $120) × 12 |
-| Government Services | $6,296 | $840 + ($460 + $654) × 4 |
-| Groceries | $12,000 | $1,000 × 12 |
-| **Total expenses** | **$189,296** | Full mortgage repayments included — dashboard shows positive surplus |
-| **Surplus (before discretionary)** | **~$23,536** | Income $212,832 − expenses $189,296 |
-
-> The surplus ($23,536/yr ≈ $1,961/mo) is cash flow after all mortgage repayments. Of the $111,600/yr in repayments, ~$88,800 is interest (a real cost) and ~$22,800 builds equity. Dashboard is now psychologically accurate — positive because cash inflows exceed committed outflows.
+> True annual cushion is ~$12,200/yr before discretionary. Korea trip eats almost all of it in 2026. Discretionary spending (eating out, fuel, entertainment, clothing, gifts, kids one-offs) is NOT yet modelled; the August 2026 review with Mina is when discretionary gets added with 3 months of clean actuals as evidence.
 
 Discretionary spending (eating out, fuel, clothing, travel, entertainment, gifts, kids one-offs) is NOT yet modelled. The August 2026 review with Mina is the target for adding this layer with 3 months of actuals as evidence.
 

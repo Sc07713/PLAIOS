@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:developers.pocketsmith.com)",
+      "WebFetch(domain:my.pocketsmith.com)",
+      "WebFetch(domain:learn.pocketsmith.com)",
+      "WebFetch(domain:www.basiq.io)",
+      "WebFetch(domain:www.fiskil.com)",
+      "WebFetch(domain:www.commbank.com.au)",
+      "WebFetch(domain:www.pocketsmith.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:treasury.gov.au)",
+      "WebFetch(domain:api-docs.firefly-iii.org)",
+      "WebFetch(domain:docs.firefly-iii.org)",
+      "WebFetch(domain:developer.frollo.com.au)",
+      "WebFetch(domain:blog.fiskil.com)",
+      "WebFetch(domain:api.basiq.io)"
+    ]
+  }
+}

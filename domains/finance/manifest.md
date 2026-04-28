@@ -18,3 +18,5 @@ Load based on query type (see Context Protocol in `claude.md`):
 - `reference/risk-and-wealth.md` — Insurance audit, estate planning, goal framework, investment principles, business exit planning, personalisation slots
 - `reference/tooling-research-personal-finance-apps.md` — Evaluation of Firefly III, Actual Budget, GnuCash, Ghostfolio for self-hosted personal finance
 - `reference/ai-cfo-architecture-research.md` — Architecture research for AI-powered Household CFO: data structuring, proactive monitoring, scenario modelling, privacy, build sequence
+- `reference/pocketsmith-api-research.md` — Deep research on PocketSmith API capabilities, pricing, MCP server, AU bank feeds, comparison with Firefly III for data layer evaluation
+- `reference/au-bank-data-access-research.md` — Research on all paths to programmatic Australian bank data (CDR, Basiq, Yodlee, Fiskil, screen scraping, PocketSmith-as-aggregator). April 2026
