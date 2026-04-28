@@ -1,0 +1,22 @@
+# PLAIOS Memory Index
+
+- [PocketSmith — Mina approved, ready to sign up](project_pocketsmith_mina_approval.md) — Mina onboard 2026-04-17; Scott = primary, Mina = Advisor access
+- [Wulfric doing daily boxing](project_wulfric_boxing.md) — No longer co-training with Scott on LPP; boxing every day as of mid-Apr 2026
+- [Ask one question at a time](feedback_one_question_at_a_time.md) — When gathering info, single question per turn; wait for answer before next
+- [Property portfolio structure](project_property_portfolio.md) — Sassafras (PPOR), Sydenham (investment), Hillside (family home, Mina's family rents partial)
+- [Celendine rent — combined household, partial gap](project_celendine_rent_source.md) — Hillside ($2,200/mo combined rent) paid by Rinoa + Sam + Mina's mum (combined). Apr 2026 ~$800 outstanding (Mina actioning)
+- [Rent → offset restructure planned](project_rent_to_offset_restructure.md) — All rent to funnel into ANZ One Offset, servicing all 3 mortgages; not yet live
+- [Hillside loan topped up to fund Sassafras purchase](project_hillside_loan_topup.md) — Hillside investment loan was increased to fund Sassafras PPOR acquisition; rent ($2,200) does not cover full repayment ($2,928); ~$728/mo gap from operating cash
+- [PocketSmith budget rebuilt 2026-04-19 — 34-event baseline](project_pocketsmith_budget_baseline.md) — 34 active events, mortgages simplified to 3 full-repayment lines; surplus before discretionary ~$20K/yr; mapping doc at domains/finance/reference/pocketsmith-budget-mapping.md
+- [BNPL debt is historic discretionary overspend](project_bnpl_discretionary_residue.md) — $6,270 across GEM/ZipPlus/PayPal discovered 2026-04-19; mostly eating out, not strategic debt; ~$300/mo paydown from Virgin
+- [Household rule — no eating out](feedback_no_eating_out_rule.md) — Rule established 2026-04-19 after BNPL discovery; active until BNPL cleared and discretionary baseline established
+- [Korea family trip August 2026](project_korea_trip_august_2026.md) — Major discretionary event; breaks the clean May-Jul measurement window; needs trip budget in PocketSmith; BNPL ideally cleared first
+- [Travel domain drafted — not yet active](project_travel_domain_drafted.md) — Spec saved at `domains/travel/CLAUDE.md` 2026-04-19; activate later. Camping-with-kids queued as pending trip.
+- [Harmoney loan $19K split](project_harmoney_loan_split.md) — $14K to Park View rent prep (deductible interest + depreciation schedule needed); $5K to home improvement (property TBC)
+- [PocketSmith forecast cleanup — RESOLVED 2026-04-22](project_pocketsmith_mortgage_duplication_suspected.md) — Forecast was falling $10,814/mo due to phantom events from initial OAuth feed; now +$313/mo gain; Korea savings plan + rent→offset still open
+- [PocketSmith budget targets vs events are separate](feedback_pocketsmith_budget_vs_events.md) — Budget page tiles are manual targets, NOT event-derived; API has no write tool for them; after event changes tell user to update targets in UI
+- [PocketSmith budget consolidated 2026-04-24](project_pocketsmith_consolidated_budget.md) — One event per category, all on Scott's CA, dated 1st of month. 15 household + 5 Korea events. +$1,018/mo surplus. Don't split again.
+- [PocketSmith transfer cleanup deferred to May](project_pocketsmith_transfer_untangling.md) — April transfers have $4,770/mo misclassification leakage (Hung Sam Ha rent, school fees, Scott→Mina→bills pipeline); user resetting from May 2026
+- [Fifth child on the way](project_fifth_child_pregnancy.md) — Mina pregnant 2026-04-24; mat leave hole ~$33-66K, childcare expansion, baby startup costs; protected priorities: schools, homes, nutrition
+- [Mina capacity plan — Approach C parked](project_mina_capacity_plan_2026-04.md) — Targets (d) financial anxiety + (a) tidy house she didn't organise; systems now ($0), paid help post-BNPL; user parked execution
+- [Close-out protocol — back up memory to git](feedback_closeout_protocol.md) — On "close out", mirror memory dir into D:\PLAIOS\memory\ and commit; ask before staging non-memory changes
