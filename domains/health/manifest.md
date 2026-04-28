@@ -10,7 +10,7 @@
 ## On-Demand Reference
 | File | Summary | Lines | Load When |
 |------|---------|-------|-----------|
-| reference/training-program-lpp-v5.3.md | Full LPP v5.3 program — weekly split, all exercises, sets/reps, VO2 max protocol, core circuit, equipment | ~400 | "What's today's workout?", specific session details, exercise form cues |
+| reference/training-program-lpp-v5.4.md | Full LPP v5.3 program — weekly split, all exercises, sets/reps, VO2 max protocol, core circuit, equipment | ~400 | "What's today's workout?", specific session details, exercise form cues |
 | reference/training-methodology.md | Mentzer HIT-hybrid, dual-mode system, progressive overload, evidence tables | ~120 | Workout planning, training questions, programme design |
 | reference/nutrition.md | Protein architecture, IF protocol, supplement framework, family nutrition, cycling | ~150 | Nutrition questions, meal planning, supplement decisions |
 | reference/medical-advisory.md | Scope of practice, referral triggers, per-family-member medical awareness, Australian healthcare | ~100 | Medical appointments, health decisions, injury assessment |

@@ -1,5 +1,5 @@
-# LEGS / PUSH / PULL v5.3
-### Strength + Hypertrophy + VO2 Max - Scott & Wulfy - February 2026
+# LEGS / PUSH / PULL v5.4
+### Strength + Hypertrophy + VO2 Max - Scott & Wulfy - April 2026
 
 ---
 
@@ -30,7 +30,7 @@
 | Day | Session | Full | Rush |
 |-----|---------|------|------|
 | **Sunday AM** | **VO2 Max -- Run at Keilor Park** | **~35 min** | -- |
-| **Sunday PM** | Legs Strength + Core | ~39 min | ~18 min |
+| **Sunday PM** | Legs Strength + Core | ~35 min | ~13 min |
 | **Monday** | Push Strength | ~28 min | ~14 min |
 | **Tuesday** | Pull Strength | ~28 min | ~14 min |
 | **Wednesday** | **VO2 Max -- Run at Football Field** | **~35 min** | -- |
@@ -40,11 +40,11 @@
 | **Saturday** | Pull Hypertrophy | ~30 min | ~14 min |
 
 **Weekly totals:**
-- Resistance (Full Mode): ~3.1 hours
-- Resistance (Rush Mode): ~1.5 hours
+- Resistance (Full Mode): ~3.0 hours
+- Resistance (Rush Mode): ~1.4 hours
 - VO2 Max: ~1.75 hours (3 sessions)
-- **Combined Full: ~4.9 hours** -- slightly above 4.5-hour longevity sweet spot, justified by visceral fat dose-response evidence
-- **Combined Rush: ~3.3 hours** -- well within sweet spot
+- **Combined Full: ~4.8 hours** -- slightly above 4.5-hour longevity sweet spot, justified by visceral fat dose-response evidence
+- **Combined Rush: ~3.2 hours** -- well within sweet spot
 
 ---
 
@@ -102,16 +102,19 @@ Same protocol. Morning run, then push hypertrophy session after.
 
 | # | Exercise | Full | Rush | Notes |
 |---|----------|------|------|-------|
-| 1 | Goblet Squat | 3 x ~6 | 1 x fail | Hold final eccentric. |
-| 2 | Romanian Deadlift | 3 x ~6 | 1 x fail | Hold final eccentric. |
+| 1 | Bulgarian Split Squat | 3 x ~6 each | 1 x fail each | 2 x 21kg DBs. Heavy. Flat foot. Hold final eccentric. |
+| 2 | Single-leg RDL | 3 x ~6 each | 1 x fail each | 24kg KB. Hold final eccentric. |
 | 3 | Standing KB Hamstring Curl | 3 x fail | 1 x fail | Every set to failure. Single leg. |
-| 4 | Bulgarian Split Squat | 3 x ~6 each | 1 x fail each | Hold final eccentric. |
-| 5 | Calf Raise | 3 x ~6 | 1 x fail | Hold final eccentric. |
-| 6 | Core Circuit | 4 min | 2.5 min | See circuit below. |
+| 4 | Single-leg Calf Raise | 3 x ~6 each | 1 x fail each | 24kg KB. Hold final eccentric. |
+| 5 | Core Circuit | 4 min | 2.5 min | See circuit below. |
+
+> **Why all single-leg on strength day:** Home DB/KB ceiling (21kg DBs, 24kg KBs) is insufficient for bilateral compound legs at ~6 reps. Going unilateral effectively doubles the load per leg. Bulgarian with 2 x 21kg = 42kg on one leg — legitimate strength stimulus. Revisit bilateral movements when gym/barbell access available.
 
 > **Standing KB Hamstring Curl Setup:** Kettlebell tied to rope, attached to back of foot/heel. Stand on plyo box for clearance so KB hangs freely. Hold box or wall for balance. Curl heel toward glute -- 3-4s up, 1-2s squeeze at top, 3-4s lowering. Single leg, each side to failure.
 
 > **Path back to Nordics:** When standing curls get easy at 24kg and you're repping past 20+, hamstrings are strong enough for eccentric-only Nordics. Or swap to machine hamstring curl once gym membership happens.
+
+> **Path back to bilateral:** Once gym membership provides barbell access, reintroduce barbell squats and conventional deadlifts as exercises 1-2. Bulgarians move back to an accessory slot.
 
 ---
 
@@ -294,7 +297,7 @@ Friday AM run -> Friday Push Hypertrophy: different muscle groups entirely. Zero
 
 | Muscle | Strength | Hypertrophy | Weekly Total |
 |--------|----------|-------------|--------------|
-| Quads | 6 | 6 | 12 |
+| Quads | 3 | 6 | 9 |
 | Hamstrings | 6 | 6 | 12 |
 | Calves | 3 | 3 | 6 |
 | Chest | 3 | 6 | 9 |
@@ -315,10 +318,10 @@ Friday AM run -> Friday Push Hypertrophy: different muscle groups entirely. Zero
 
 | Muscle | Strength Day | Hypertrophy Day | Status |
 |--------|-------------|-----------------|--------|
-| Quads | Goblet Squat, Bulgarian Split Squat | Heel-Elevated Bulgarian, Walking Lunges | OK |
-| Hamstrings | RDL, Standing KB Curl | Single-leg RDL, Standing KB Curl | OK |
-| Glutes | Indirect via squats, RDLs, lunges | Same | OK |
-| Calves | Calf Raise | Calf Raise | OK |
+| Quads | Bulgarian Split Squat | Heel-Elevated Bulgarian, Walking Lunges | OK -- 9 sets/week, higher per-set intensity (unilateral) |
+| Hamstrings | Single-leg RDL, Standing KB Curl | Single-leg RDL, Standing KB Curl | OK |
+| Glutes | Indirect via Bulgarians, SL-RDLs | Same | OK -- unilateral increases glute-med demand |
+| Calves | Single-leg Calf Raise | Calf Raise | OK |
 | Chest | Incline Press | Incline Press, Incline Fly | OK |
 | Lats | Pull-ups | DB Pullover | OK |
 | Mid-back | DB Row | DB Row | OK |
@@ -331,7 +334,7 @@ Friday AM run -> Friday Push Hypertrophy: different muscle groups entirely. Zero
 | Triceps (long) | Skull Crusher | SC->RP Flow | OK |
 | Triceps (lat/med) | Reverse Press | SC->RP Flow | OK |
 | Core | Circuit | Circuit | OK |
-| Erectors | RDL, Single-leg RDL | Same | OK indirect |
+| Erectors | Single-leg RDL | Single-leg RDL | OK indirect |
 | Forearm extensors | Reverse Wrist Curl | Reverse Curl, Reverse Wrist Curl | OK |
 | Forearm flexors | Wrist Curl | Wrist Curl | OK |
 | Traps | Rows, pull-ups, RDLs | Same | Indirect only |
@@ -360,7 +363,7 @@ Friday AM run -> Friday Push Hypertrophy: different muscle groups entirely. Zero
 25-42 min -> FULL MODE
 12-18 min -> RUSH MODE
 <12 min   -> Top 3 only:
-              Legs: Goblet Squat, RDL, Standing KB Curl + Core
+              Legs: Bulgarian Split Squat, Single-leg RDL, Standing KB Curl + Core
               Push: Incline Press, OHP, Lateral Raise
               Pull: Pull-ups, Row, Hammer Curl
 
@@ -430,3 +433,4 @@ Your heart is a muscle too. Train it.
 - **v5.1** (Feb 2026): VO2 Max expanded from 2 to 3 sessions per week -- all running-based. Wednesday bike -> run at football field. Friday AM 4x4 run added at football field (before Push Hypertrophy). Evidence: running HIIT produces ~2x visceral fat reduction vs cycling (Maillard et al. 2018, ES -0.44 vs -0.21). Third session pushes above 10 METs-h/week visceral fat threshold. Weekly training ~4.8 hours.
 - **v5.2** (Feb 2026): Arm specialisation -- bicep grip rotation across pull days for full coverage. Tuesday: standing hammer curls (brachialis + long head, neutral grip). Saturday: lying supinated curls (long head stretched position on bench), standing reverse curls (brachialis + forearm extensors). Wrist curl -> reverse wrist curl paired finisher on both pull days (flexors + extensors, back-to-back). Forearms upgraded from indirect to full direct coverage across all compartments.
 - **v5.3** (Feb 2026): All direct chest work moved to incline. Monday flat DB bench press -> incline DB press (30-45 degrees). Friday flat DB chest fly -> incline DB chest fly (30-45 degrees). Clavicular head prioritised for V-taper aesthetics -- sternal head receives sufficient indirect activation from all pressing angles. No flat pressing remains in program.
+- **v5.4** (Apr 2026): Legs Strength converted to all-unilateral — home equipment ceiling (21kg DBs, 24kg KBs) insufficient for bilateral compound legs at strength rep ranges. Goblet squat → Bulgarian split squat (2x21kg DBs). Bilateral RDL → single-leg RDL (24kg KB). Bilateral calf → single-leg calf (24kg KB). Old Bulgarian accessory slot removed (now exercise 1). Quad weekly volume 12 → 9 sets — compensated by higher per-set intensity via unilateral loading. Bilateral compounds return when gym/barbell access available.
