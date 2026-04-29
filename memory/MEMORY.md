@@ -20,3 +20,5 @@
 - [Fifth child on the way](project_fifth_child_pregnancy.md) — Mina pregnant 2026-04-24; mat leave hole ~$33-66K, childcare expansion, baby startup costs; protected priorities: schools, homes, nutrition
 - [Mina capacity plan — Approach C parked](project_mina_capacity_plan_2026-04.md) — Targets (d) financial anxiety + (a) tidy house she didn't organise; systems now ($0), paid help post-BNPL; user parked execution
 - [Close-out protocol — back up memory to git](feedback_closeout_protocol.md) — On "close out", mirror memory dir into D:\PLAIOS\memory\ and commit; ask before staging non-memory changes
+- [Trading domain — favourite algo VWEMA-BB Momentum](project_trading_favorite_algo_vwema.md) — Pine v5 anchor algo saved at domains/trading/legacy/algos/; tiered exits, multi-timeframe, TTM Squeeze, fork of RezzaHmt
+- [Trading-tools V1 — mid-build at 2026-04-29](project_trading_tools_v1_progress.md) — Repo D:\Plaios-tools\trading-tools\ branch master; Tasks 1–8/14 done; pg17:5432, IB:8000 read-only, ib-async 2.x, volume×100 fix at d0dee13
