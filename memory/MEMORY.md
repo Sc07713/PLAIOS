@@ -22,4 +22,5 @@
 - [Close-out protocol — back up memory to git](feedback_closeout_protocol.md) — On "close out", mirror memory dir into D:\PLAIOS\memory\ and commit; ask before staging non-memory changes
 - [Context limit thresholds — close out at 250k](feedback_context_limit_thresholds.md) — Soft limit 250k (proactively suggest close-out), 500k = context rot, 1M = compaction; plan workload around these
 - [Trading domain — favourite algo VWEMA-BB Momentum](project_trading_favorite_algo_vwema.md) — Pine v5 anchor algo saved at domains/trading/legacy/algos/; tiered exits, multi-timeframe, TTM Squeeze, fork of RezzaHmt
-- [Trading-tools V1 — mid-build at 2026-04-29](project_trading_tools_v1_progress.md) — Repo D:\Plaios-tools\trading-tools\ branch master; Tasks 1–8/14 done; pg17:5432, IB:8000 read-only, ib-async 2.x, volume×100 fix at d0dee13
+- [Trading-tools V1 — built and pushed](project_trading_tools_v1_built.md) — D:\Plaios-tools\trading-tools\ (master), GitHub Sc07713/trading-tools (private), pg17:5432 trading_data with SPY/NVDA/VIX 20Y daily+weekly bars
+- [Trading data — 20Y window is enough](feedback_trading_data_window_20y.md) — Pre-1990s gaps from check_gaps are noise, not bugs; pre-IB-window market regime not analogous to today
