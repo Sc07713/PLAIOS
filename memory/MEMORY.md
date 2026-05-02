@@ -24,5 +24,6 @@
 - [Trading domain — favourite algo VWEMA-BB Momentum](project_trading_favorite_algo_vwema.md) — Pine v5 anchor algo saved at domains/trading/legacy/algos/; tiered exits, multi-timeframe, TTM Squeeze, fork of RezzaHmt
 - [Trading-tools V1 — built and pushed](project_trading_tools_v1_built.md) — D:\Plaios-tools\trading-tools\ (master), GitHub Sc07713/trading-tools (private), pg17:5432 trading_data with SPY/NVDA/VIX 20Y daily+weekly bars
 - [Trading-tools V2 — built and pushed](project_trading_tools_v2_built.md) — 2026-05-02 strategy register + harness + 11 strategies + 251 baseline runs (NVDA-BH 48% CAGR tops leaderboard); 63 tests pass; pushed to Sc07713/trading-tools master
+- [Trading V3 scope — needs design session](project_trading_v3_scope_pending.md) — 2026-05-03 VWEMA-BB ported (loses to BH); user wants PEAD + news sentiment + quality fundamentals + harness fixes scoped next session
 - [Trading data — 20Y window is enough](feedback_trading_data_window_20y.md) — Pre-1990s gaps from check_gaps are noise, not bugs; pre-IB-window market regime not analogous to today
 - [Trading benchmarks — SPY-BH and asset-BH always](feedback_trading_benchmark_spy_bh.md) — Every backtest reports vs SPY-BH AND vs buy-and-hold on the underlying instrument; both mandatory
