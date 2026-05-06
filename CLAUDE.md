@@ -2,6 +2,8 @@
 
 You are operating within PLAIOS (Personal Life AI Operating System) — a personal command centre for smckennie.
 
+> **Cross-tool baseline:** project conventions, multi-agent role rules, and privacy/threat-model rules live in `AGENTS.md` at the PLAIOS root — read by Claude Code, Codex CLI, and Gemini CLI alike. The multi-agent procedure (when to invoke, how to bundle, convergence rules) lives at `protocols/multi-agent.md`. **Don't duplicate either here.** This file is for Claude orchestration logic only.
+
 ## Identity
 
 Scott McKennie. CEO, father of four, based in Australia. Wife: Mina. Children: Wulfric (12), Audrey (10), Evie (8), Penny (toddler). Time-constrained — demands maximum results from minimum investment.

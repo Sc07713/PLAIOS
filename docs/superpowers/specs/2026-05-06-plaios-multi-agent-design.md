@@ -15,7 +15,23 @@ Adopt the multi-agent development recipe that was 3-model-ratified for ICX (`D:\
 
 Lift the load-bearing parts of the source recipe verbatim — CLI invocations, 10-phase investigation structure, evidence-bundle context firewall, token discipline, default workflow, variants. Layer PLAIOS-specifics on top: trigger rules for life-domain artefacts, privacy/threat-model rules, output destinations, investigation folder placement.
 
-**Rejected alternatives:** faithful port (no overlay) loses PLAIOS-specific framing; PLAIOS-tailored from scratch doubles the work and risks drift from the version Scott uses at ICX.
+**Rejected:** immediate/faithful port with no overlay — loses PLAIOS-specific framing (life-domain trigger rules, vendor-hosted privacy threat model).
+
+**Considered but not chosen:** PLAIOS-tailored from scratch — doubles work, risks drift from the recipe Scott uses at ICX. Kept the simpler "core + overlay" path.
+
+## 2a. Procedure goal — convergence on a binding outcome
+
+Every investigation that runs through this procedure exists to produce a **group-bound decision, recommendation, or outcome** — not a balanced essay, not a perspectives roundup. The structure is **input → process → output**:
+
+- **Input:** topic + spec + evidence
+- **Process:** independent research, parallel deliberation, mediated reconciliation
+- **Output:** one binding artefact (decision record, procedure, recommendation), with dissent recorded but not sovereign
+
+When the three models converge, the orchestrator (Scott) ratifies and ships. When they don't converge after mediation (phase 09), the orchestrator decides; the disagreement is recorded in `09-resolution.md` so future investigations can learn from it. The orchestrator is always the tie-breaker — no 4th-model arbiter.
+
+**Dialogue without convergence is procedure failure.** If a phase produces more disagreement than it resolves, the procedure escalates to mediation rather than continuing in circles.
+
+**Quality property — every agent gets it from a cold read.** The procedure document and `AGENTS.md` must each be readable by a model that has zero prior context and still let it understand: who it is in this system, what its role is for this invocation, what's allowed in the bundle, what response shape converges toward an outcome. KISS / irreducible complexity is the *test*, not the *aspiration*.
 
 ## 3. File layout
 
