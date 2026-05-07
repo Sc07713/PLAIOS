@@ -38,7 +38,11 @@
       "Bash(cp /c/Users/smckennie/.claude/projects/D--PLAIOS/memory/feedback_closeout_protocol.md /d/PLAIOS/memory/feedback_closeout_protocol.md)",
       "Bash(git -C /d/PLAIOS status --short)",
       "mcp__plugin_context7_context7__query-docs",
-      "PowerShell(Test-NetConnection *)"
+      "PowerShell(Test-NetConnection *)",
+      "PowerShell(.\\\\bin\\\\new-investigation.ps1 -Slug 'insurance-audit')",
+      "mcp__pocketsmith__find_recurring_expenses",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_snapshot"
     ]
   }
 }
