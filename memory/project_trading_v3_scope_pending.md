@@ -1,27 +1,18 @@
 ---
-name: trading V3 scope — needs design session
-description: Mid-2026-05-03 V2 finished + VWEMA-BB ported; V3 scoping deferred — event overlay (PEAD), news sentiment, harness extensions, quality fundamentals all on the table
+name: trading V3 — decomposed into V3.1 (done) / V3.2 / V3.3
+description: 2026-05-11 — V3 split into 3 sub-projects; V3.1 robustness layer SHIPPED; V3.2 portfolio overlay next; V3.3 fundamentals/PEAD via SEC EDGAR + Finnhub
 type: project
-originSessionId: f7943455-e60e-4ac8-9d10-15a64ba1e70d
+originSessionId: 32ef78ca-7c45-4b71-99bf-3e5a0d346492
 ---
-V2 shipped 2026-05-02; VWEMA-BB Momentum simplified port added 2026-05-03 (run_id 253-258, contested edge_status). User wants V3 scoping done in a dedicated session — too many open design questions to resolve in passing.
+**Decision (2026-05-11):** "V3" is three independent sub-projects, each spec→plan→ship. Goal across all three: find a *real* >0.9 Sharpe strategy (V2's only >0.9 runs were artifacts — BH on survivorship-selected NVDA/AVGO/COST/AAPL; zero of the 11 pattern strategies clear 0.9 anywhere).
 
-**V3 scope items to weigh and prioritise (not yet decided):**
+- **V3.1 — Robustness layer. SHIPPED + pushed 2026-05-11** (commits 0608695…12d9f16, GitHub Sc07713/trading-tools master). Transaction costs (5 bps round-trip in `run_baseline.py` + `backtest` CLI; library/`_walk_signals` default 0.0 = V2 anchor); full/IS/OOS split (OOS = last 30% of bars, by bar count); Probabilistic + Deflated Sharpe Ratio (Bailey & López de Prado, stdlib-only — `math.erf` + `statistics.NormalDist`); `tt verdict-report <run_id>` → REAL EDGE (OOS Sharpe>0.9 ∧ DSR≥0.95) / PROMISING (∧ PSR(0.9)≥0.95) / NO EDGE; new `backtest_period_stats` table + `cost_bps`/`oos_fraction` cols on `backtest_runs`; `run_baseline.backfill_dsr()`; new modules `backtest/periods.py` + PSR/DSR in `backtest/stats.py`; 91 tests pass. Spec/plan: `D:\Plaios-tools\trading-tools\docs\{specs,plans}\2026-05-11-v3.1-robustness-layer.md`. **Result of the 250-run cost-aware re-run: 0 REAL EDGE, 0 PROMISING.** Top OOS Sharpe is AVGO buy-and-hold 1.52 (PSR 0.87, DSR 0.65 — survivorship, not edge); deflated SR* threshold ≈ 1.31 over the 224-trial family; the 11 pattern strategies are confirmed dead under the stricter lens (`star` on AVGO is the only one that beat BH anywhere — OOS 1.03, still NO EDGE). Results table in `docs/strategies.md`.
+- **V3.2 — Portfolio overlay. NEXT.** Combine the strategy signals across the 25-name universe (equal/vol-weight, market-neutral). Diversification mechanically lifts Sharpe (single-name edge ~0.5–0.8 → portfolio 0.9–1.1); reveals which signals are independent vs. correlated. No new data. Brings parameter-fitting → makes IS/OOS a real held-out test (today's strategies are parameter-free, so IS/OOS is only a stability check).
+- **V3.3 — Fundamentals + earnings → PEAD / quality / cross-sectional value-momentum.** Data plan (researched 2026-05-11): **SEC EDGAR `companyfacts` API** (free, genuinely point-in-time via filing dates, 15-20y depth, needs XBRL tag→metric mapping ~4-6h) for fundamentals backbone; **Finnhub free tier** for earnings actual-vs-consensus / surprise / announcement dates (drives PEAD); **Financial Modeling Prep premium $15-30/mo** as fallback if XBRL parsing is painful. IB's `reqFundamentalData` rejected (shallow history, needs paid Reuters add-on). New `fundamentals`/`earnings` tables + cross-sectional strategy family.
+- **V3.5 (parked)** — News sentiment overlay. User specifically asked: positive-news→long quality stocks, negative-news→short quality stocks. Needs paid news feed (Polygon/Benzinga/NewsAPI) + sentiment classifier (LLM or vendor score). Mixed academic edge, higher complexity. Do after V3.3 (needs the quality filter).
+- **V3.1b (optional)** — walk-forward windowed re-runs + bootstrap Sharpe distributions, if PSR/DSR + portfolio overlay don't reach a trustworthy >0.9.
+- **V4+** — options layer (put-spreads replace synthetic shorts → honest long_short); ESG falsification; advisory layer.
 
-1. **Earnings event overlay (PEAD)** — Bernard & Thomas 1989. Free data (Finnhub/AlphaVantage/IB fundamentals). Adds `events` table + earnings ingest + `pead` strategy. ~1 day. Cheapest "real edge" candidate.
-2. **News sentiment overlay** — User specifically asked about this. Wants positive-news → long on quality stocks, negative-news → short on quality stocks. Needs feed (Polygon/Benzinga/NewsAPI — mostly paid) + sentiment classifier (LLM or vendor score). Higher complexity, mixed academic edge. Likely V3.5.
-3. **Quality fundamentals** — V2.5 in current roadmap. P/E, FCF growth, ROE. Required for "quality stocks only" filter that PEAD and news strategies need. Free via AlphaVantage/Finnhub.
-4. **Harness extensions for faithful Pine ports** — to make VWEMA-BB Momentum match its TradingView baseline:
-   - Per-strategy stop-loss param (entry-price-anchored % stop)
-   - Limit-order fill semantics (fill at min(limit, next_open) for buy limits)
-   - Fractional position management (sell ½, ¼, ⅛ on tiered triggers)
-   - Currently V2 signal protocol is binary entry/exit + next-bar-open fill, which biases mean-reversion strategies down vs Pine
-5. **Options layer** — V3 in roadmap. Replace synthetic shorts (no borrow cost) with put-spreads. Needed for honest long_short backtests.
-6. **VWEMA-BB long_short variant** — easy after #5 lands. Pine supports Short=1 and Short=2 modes already documented.
-7. **`backtest_results` schema fix** — NUMERIC(10,6) overflows for >9999x returns (caught by NVDA high_52w_breakout fail). Widen to NUMERIC(14,6) and re-run the failed runs.
+**Harness debt still open** (deferred — V3 doesn't need it yet): per-strategy entry-anchored % stop-loss; limit-order fill semantics; fractional position management (sell ½/¼/⅛ on tiered triggers). These bias mean-reversion strategies (esp. the VWEMA-BB Pine port) down vs their TradingView baseline. The `backtest_results` NUMERIC overflow on >9999x returns (NVDA high_52w_breakout) is also still unfixed.
 
-**User's stated preference:** "buy and hold quality stocks with good management" appears to dominate. V3 should layer event/sentiment overlays on that base, not try to replace it. Frame V3 as "find the small alpha on top of BH, not as a BH-substitute".
-
-**Current state:** trading-tools master at commit b03ce06 (VWEMA-BB), pushed to GitHub. 12 strategies registered. 256+ backtest runs in trading_data. 64 tests pass.
-
-**Files:** plan + spec dirs at `D:\PLAIOS\docs\superpowers\{plans,specs}\`. Repo at `D:\Plaios-tools\trading-tools\`.
+**User's stated framing:** "buy and hold quality stocks with good management" is the base case. V3 layers small alpha on top of BH — not a BH-substitute. Every backtest reports vs SPY-BH AND vs asset-BH (mandatory).
