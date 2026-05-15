@@ -4,6 +4,7 @@
 - [PocketSmith — Mina approved, ready to sign up](project_pocketsmith_mina_approval.md) — Mina onboard 2026-04-17; Scott = primary, Mina = Advisor access
 - [Wulfric doing daily boxing](project_wulfric_boxing.md) — No longer co-training with Scott on LPP; boxing every day as of mid-Apr 2026
 - [Ask one question at a time](feedback_one_question_at_a_time.md) — When gathering info, single question per turn; wait for answer before next
+- [Don't diminish the value of savings](feedback_dont_diminish_savings_value.md) — Treat user's actual capital as real money regardless of scale. Don't frame accounts as "small" / "tactical sleeve" / "experiment" unless he does first. Concrete order lists > "is this enough capital" framing.
 - [Property portfolio structure](project_property_portfolio.md) — Sassafras (PPOR), Sydenham (investment), Hillside (family home, Mina's family rents partial)
 - [Celendine rent — combined household, partial gap](project_celendine_rent_source.md) — Hillside ($2,200/mo combined rent) paid by Rinoa + Sam + Mina's mum (combined). Apr 2026 ~$800 outstanding (Mina actioning)
 - [Rent → offset restructure planned](project_rent_to_offset_restructure.md) — All rent to funnel into ANZ One Offset, servicing all 3 mortgages; not yet live
@@ -11,7 +12,7 @@
 - [PocketSmith budget rebuilt 2026-04-19 — 34-event baseline](project_pocketsmith_budget_baseline.md) — 34 active events, mortgages simplified to 3 full-repayment lines; surplus before discretionary ~$20K/yr; mapping doc at domains/finance/reference/pocketsmith-budget-mapping.md
 - [BNPL debt is historic discretionary overspend](project_bnpl_discretionary_residue.md) — $6,270 across GEM/ZipPlus/PayPal discovered 2026-04-19; mostly eating out, not strategic debt; ~$300/mo paydown from Virgin
 - [Household rule — no eating out](feedback_no_eating_out_rule.md) — Rule established 2026-04-19 after BNPL discovery; active until BNPL cleared and discretionary baseline established
-- [Korea family trip August 2026](project_korea_trip_august_2026.md) — Major discretionary event; breaks the clean May-Jul measurement window; needs trip budget in PocketSmith; BNPL ideally cleared first
+- [Korea family trip August 2026](project_korea_trip_august_2026.md) — Trip budgeted in PocketSmith ($14,799 buffered); fundable from surplus + July tax refund; itinerary locked. Don't cite as a constraint on unrelated financial decisions — it's handled.
 - [Travel domain drafted — not yet active](project_travel_domain_drafted.md) — Spec saved at `domains/travel/CLAUDE.md` 2026-04-19; activate later. Camping-with-kids queued as pending trip.
 - [Harmoney loan $19K split](project_harmoney_loan_split.md) — $14K to Park View rent prep (deductible interest + depreciation schedule needed); $5K to home improvement (property TBC)
 - [PocketSmith forecast cleanup — RESOLVED 2026-04-22](project_pocketsmith_mortgage_duplication_suspected.md) — Forecast was falling $10,814/mo due to phantom events from initial OAuth feed; now +$313/mo gain; Korea savings plan + rent→offset still open
