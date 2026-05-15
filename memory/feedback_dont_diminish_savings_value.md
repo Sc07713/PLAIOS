@@ -17,3 +17,10 @@ metadata:
 - If a deployment question hinges on knowing other holdings, ASK ONCE specifically — don't keep framing the current account as marginal
 - Concrete order lists + specific share counts > hand-wavy "is this enough capital" questions
 - Apply this rule to all financial discussions: PocketSmith balances, super accounts, equity holdings, cash reserves — treat them at face value
+
+**User's stated mental model (2026-05-15):** "this is my savings, and I really want to allocate it effectively before I can confidently put more in." Scott is using the IBKR account as a proving ground — deploying a strategy at manageable scale, validating it with real money, then scaling up once confidence is built. The account size is a function of risk-management discipline, NOT a function of total wealth. This is the correct way to operate; treat it that way.
+
+**Implication for recommendations:**
+- Phase-in approaches > all-in deployments
+- Lower-risk variants of strategies (K=3 vs K=5) suit the confidence-building phase
+- The next-session conversation after a deployment is "how is it working / do we scale up" — not "was that the right account to use"
