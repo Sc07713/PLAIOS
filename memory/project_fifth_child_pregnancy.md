@@ -1,32 +1,29 @@
 ---
-name: Mina pregnant with fifth child
-description: Fifth child on the way as of 2026-04-24; will reshape childcare, Mina's income during leave, and household budget margins
+name: Miscarriage 2026-05-15 — no fifth child
+description: Mina suffered a miscarriage 2026-05-15. The 5th-child financial planning (mat leave hole, childcare expansion, baby startup costs, pregnancy underwriting clock) is no longer in play. Family remains at 4 kids.
 type: project
 originSessionId: c021306b-3185-4efd-b11a-5da8d0f159ff
 ---
-Mina is pregnant with baby #5 (announced to me 2026-04-24). Family will grow from 6 to 7 (Scott, Mina, Wulfric 12, Audrey 10, Evie 8, Penny toddler, + new baby).
+Mina suffered a miscarriage on 2026-05-15 (announced in close-out conversation). The pregnancy announced 2026-04-24 did not progress.
 
-**Budget impact to model:**
-- **Mina's maternity leave** — Mina's $5,496/mo salary will drop during leave. Australian Parental Leave Pay: ~$882/week × 22 weeks = ~$19,404 total. Any employer top-up? Check. Likely 6–12 months affected. At $5,496/mo lost, that's $33K–$66K hit to household income.
-- **Childcare expansion** — when Mina returns to work, Penny may still be in care + new baby in care = potential $1,528/mo childcare if 2 kids at Little Lane (double Penny's current $764/mo). Review Child Care Subsidy percentages (CCS scales with # kids in care).
-- **Incremental baby costs** — startup costs (cot, car seat for 5 kids, pram, etc.) estimated $3K-5K; ongoing ~$200-300/mo in extra groceries/nappies/baby-specific
-- **Medical** — delivery + postnatal care (Medibank should cover most but check extras cover)
-- **Car capacity** — 5 kids may not fit in current vehicle configuration; possible vehicle upgrade needed
+**Implications for household planning — all of these come OFF the books:**
 
-**Current budget margin:**
-- +$1,018/mo surplus before discretionary, +$12K/yr
-- Korea trip eats $11,799 of 2026's margin
-- Maternity leave hole (~$33-66K) will blow through the surplus entirely
+- ~~Mina's maternity leave hole ($33–66K)~~ — no longer needed
+- ~~Childcare expansion (~$1,528/mo two-kids-in-care)~~ — no longer relevant
+- ~~Baby startup costs ($3-5K)~~ — no longer needed
+- ~~Vehicle capacity question (5 kids fit?)~~ — moot
+- ~~Pregnancy underwriting clock on retail life/IP/TPD/trauma~~ — removed (see [[project_life_ip_tpd_trauma_parked_pregnancy_clock]])
 
-**User's stated priorities (2026-04-24):**
-1. Keep kids in good schools (Wulfric at Salesian, Audrey + Evie at Holy Trinity)
-2. Keep the homes (PPOR Sassafras, Park View investment, Hillside family)
-3. Ensure good nutrition
+**What still holds from the original memo:**
 
-These are protected. Cost-cutting conversations should not touch Education, Mortgages, or Groceries categories unless user explicitly opens them.
+- Stated priorities: kids in good schools (Wulfric / Audrey / Evie / Penny), keep the homes (Sassafras / Park View / Hillside), good nutrition
+- Korea trip Aug 2026 still on the books ($11,799 of 2026 margin)
+- BNPL paydown still in progress
 
 **How to apply:**
-- When discussing cashflow or budget decisions, factor in the coming maternity-leave shortfall.
-- When proposing discretionary/savings decisions, weigh against "baby buffer" need.
-- For 2026 specifically: Korea trip + baby arrival creates compounding cash pressure.
-- Pregnancy is early; confirm timeline and trimester with user if it becomes relevant.
+
+- Family remains at 4 kids (Wulfric 12, Audrey 10, Evie 8, Penny toddler). Don't refer to "fifth child" or "growing family" framing.
+- Budget margin assumptions revert to pre-pregnancy: +$1,018/mo surplus before discretionary, +$12K/yr. Korea trip still the major 2026 discretionary event.
+- Mina's capacity/anxiety drivers (see [[project_mina_capacity_plan_2026-04]]) may have shifted — don't assume; ask if it comes up.
+- The insurance underwriting urgency that came from the pregnancy clock is removed, but Scott's underlying severe underinsurance ($171k death cover vs $3.5-4M need) is still real and structural — see [[project_life_ip_tpd_trauma_parked_pregnancy_clock]].
+- Don't pry; this is a sensitive event. If Scott raises adjacent topics, follow his lead.
