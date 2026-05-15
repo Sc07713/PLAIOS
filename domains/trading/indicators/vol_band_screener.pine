@@ -1,0 +1,57 @@
+// © smckennie 2026-05-15
+// V3.3d vol_band_screener — single-instrument indicator
+//
+// Layer 1 (no universe context): shows whether THIS symbol's 1y realized vol
+// is in the [vol_lo, vol_hi] band that the V3.3d screener uses. Plots:
+//   - vol_1y_ann line
+//   - vol_lo / vol_hi horizontal thresholds + shaded in-band region
+//   - background tint when in-band
+//   - state label (persistence + dist-to-edge OR out-of-band reason)
+//
+// What this IS: a visualisation of the scanner's per-name vol measurement.
+// What this is NOT: a tradeable signal. The scanner's edge is cross-sectional
+// — picking the K lowest-vol names from SP500. On one name in isolation,
+// "in-band" says the name *would qualify* for selection but not whether it
+// would be top-K vs other passers.
+//
+// Repro: vol_1y_ann = stdev(daily pct_change, 252) * sqrt(252) — matches
+// trading_tools.signals.realized_vol_1y_ann.
+//@version=5
+indicator("V3.3d vol_band screener", shorttitle="VBS", overlay=false, max_labels_count=2)
+
+// === inputs ===
+volLo  = input.float(0.20, "vol_lo  (annualised lower band edge)", minval=0.0, maxval=2.0, step=0.05)
+volHi  = input.float(0.50, "vol_hi  (annualised upper band edge)", minval=0.0, maxval=2.0, step=0.05)
+window = input.int(252,    "vol window (trading days)",            minval=20,  maxval=504)
+
+// === computation ===
+ret      = (close - close[1]) / close[1]
+volRaw   = ta.stdev(ret, window) * math.sqrt(window)
+inBand   = not na(volRaw) and volRaw >= volLo and volRaw <= volHi
+distEdge = inBand ? math.min(volRaw - volLo, volHi - volRaw) : na
+
+// persistence: bars since most recent transition into in-band
+var int inBandStreak = 0
+inBandStreak := inBand ? (nz(inBandStreak[1]) + 1) : 0
+
+// state text, computed unconditionally (single expression — avoids Pine's
+// finicky multi-line ternary inside `if` blocks)
+stateInBand  = "in-band " + str.tostring(inBandStreak) + " bars  |  dist-to-edge " + str.tostring(distEdge, "#.##")
+stateWarmup  = "warmup (< " + str.tostring(window) + " bars)"
+stateAbove   = "above band (" + str.tostring(volRaw, "#.##") + " > " + str.tostring(volHi, "#.##") + ")"
+stateBelow   = "below band (" + str.tostring(volRaw, "#.##") + " < " + str.tostring(volLo, "#.##") + ")"
+stateText    = na(volRaw) ? stateWarmup : inBand ? stateInBand : volRaw > volHi ? stateAbove : stateBelow
+stateColor   = inBand ? color.new(color.green, 70) : color.new(color.red, 70)
+
+// === plots ===
+plot(volRaw, "vol_1y_ann", color=color.new(color.aqua, 0), linewidth=2)
+hLo = hline(volLo, "vol_lo", color=color.new(color.gray, 30), linestyle=hline.style_dashed)
+hHi = hline(volHi, "vol_hi", color=color.new(color.gray, 30), linestyle=hline.style_dashed)
+fill(hLo, hHi, color=color.new(color.aqua, 90), title="band")
+
+// background tint when in-band
+bgcolor(inBand ? color.new(color.green, 92) : na, title="in-band tint")
+
+// state label — only on the latest bar
+if barstate.islast
+    label.new(bar_index, volRaw, text=stateText, style=label.style_label_lower_right, color=stateColor, textcolor=color.white, size=size.small)
