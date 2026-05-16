@@ -69,4 +69,31 @@ Tested directly: hold equal-weight top-K SPY mega-caps by real market cap, rebal
 
 These three lenses together imply that **the V3.3d/V3.4 family is more validated than the R3000 falsification suggests** — once the universe is matched to where passive flow operates, the characteristic signal IS an edge; what's still unproven is whether the rotation problem (counterfactual ≈ actual on R3000 but counterfactual > actual on SP500) means a fractional-overlay build is worthwhile or whether the SP500 OOS-2004 lift was itself cohort-specific. **The 17-month forward OOS test on rs_vol_screener showed: held variant lost to SPY (-1.27pp), but monthly-rebalance variant beat SPY (+19.67pp, Sharpe 1.143) — confirming rotation is needed to capture regime shifts (AI capex mega-caps came online via vol normalization Q2-Q3 2025).**
 
+### SPY_top_K variants study (2026-05-15 → 2026-05-16) — the synthesis
+
+Four variants tested on top of the K=5 baseline (Sharpe 1.020, MDD −46%, CAGR +23.2% over 2010-2026):
+
+| Variant | Verdict | K=5 result | Why |
+|---|---|---|---|
+| A. Regime gate (SPY 50d>200d) | ❌ worse | Sharpe 0.958, MDD −27% | DD-reduction tax > benefit; lags entry+exit |
+| B. Momentum filter (12m>0%) | ❌ worse | Sharpe 0.973, MDD −36% | Same shape, gentler |
+| C. Hybrid 70% SPY_top_3 + 30% rs_vol K=10 monthly | ❌ worse | Sharpe 0.952, MDD −39% | rs_vol K=10 monthly is itself Sharpe 0.626 < SPY-BH 0.847 — rotation kills the cohort lift (V3.3d Phase 2 finding) |
+| D. Lump vs DCA-6 vs DCA-12 vs wait-for-pullback | ✓ lump wins | Lump dominated 12/12 entry months | Every layer of "smart timing" cost ~1pp CAGR |
+
+**Entry-month sensitivity sub-cut: K=5 always-on beat SPY in 136/136 rolling 5y windows 2010-2021.** Median lift 1.43×, worst case 1.04× (still won). **Entry timing is a second-order question.**
+
+**The synthesis (unfalsified, not yet validated):** the three lenses operate at **different timescales**, not as competing portfolio signals:
+
+| Bucket | Strategy | Timescale | Status |
+|---|---|---|---|
+| Active equity sleeve (lens 3 dominant) | SPY_top_5 monthly-rebal (K=3 for lower DD) | Months → years | ✅ shipped, validated 136/136 |
+| Watchlist / multi-year holds (lens 2 dominant) | rs_vol_screener cohort, hold 3-5+ years per name | Years | ⚠️ signal validated cohort-level, allocation discipline UNVALIDATED in this form |
+| Sentiment/news overlay (lens 1 dominant) | V3.3c — unbuilt | TBD | TBD |
+
+**The mixing layer should be capital allocation, not portfolio rotation.** Variant C's 70/30 monthly-rotated blend failed because both sleeves rotated at the same cadence; SPY_top_5 dominates anything mixed in at that timescale. The honest hybrid is **70% capital to monthly-rotation sleeve + 30% capital to frozen watchlist held 3-5+ years**.
+
+**Practical recommendation as of 2026-05-16 (pending Study 1 validation):** for new capital → 70% lump-sum into K=5 monthly-rebal (NVDA/GOOGL/AAPL/MSFT/AMZN equal-weight); 30% into a frozen basket of top-10 non-mega-cap rs_vol watchlist names bought once (current top: LRCX/KLAC/JBL/PWR/NRG/CAT/MPWR/TRGP/AMAT/GE — note 6/10 are semis, sector-diversify before deploying).
+
+**Open hole:** the watchlist-sleeve thesis is unfalsified, not validated. Next session's Study 1 (hold-once-selected rs_vol over 11 cohorts 2010-2020, 5y forward each) is the falsification test — if rs_vol-hold-5y beats SPY-BH on aggregate, ship the dual-sleeve allocation; if not, SPY_top_5 alone wins. Kickoff at `journal/next-session-watchlist-sleeve-validation-kickoff.md`.
+
 See [[project_trading_v3_scope_pending]] and [[project_tastytrade_options_account]] and [[feedback_trading_benchmark_spy_bh]].
