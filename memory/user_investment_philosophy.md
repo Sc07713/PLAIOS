@@ -1,6 +1,6 @@
 ---
 name: investment-philosophy-beat-gold-decorrelated-bets-crash-opportunity
-description: "Scott's investing principles — beat gold (hurdle + residual sleeve), decorrelated independent theses (with money-extractor exception), crash = opportunity, AND three flow/management lenses added 2026-05-15: (a) prices have an emotion/attention/resonance component not just DCF, (b) vol-band ∈ [0.25, 0.50] reads as management-extraction consistency = quality proxy, (c) mega-cap passive-flow concentration ('biggest gets biggest') is a structural tailwind that makes characteristic signals translate to portfolios on SP500 but NOT on R3000"
+description: "Scott's investing principles — beat gold (hurdle + residual sleeve), decorrelated independent theses (with money-extractor exception), crash = opportunity, AND three flow/management lenses added 2026-05-15: (a) prices have an emotion/attention/resonance component not just DCF, (b) vol-band ∈ [0.25, 0.50] reads as management-extraction consistency = quality proxy, (c) mega-cap passive-flow concentration ('biggest gets biggest') is a structural tailwind that makes characteristic signals translate to portfolios on SP500 but NOT on R3000. **2026-05-17 update: dual-sleeve (SPY_top_5 + rs_vol watchlist) recommendation FALSIFIED — Study 1 + Study 2 both show no minhold/blend cell beats SPY_top_5 alone; recommendation is now 100% SPY_top_5 monthly-rebal.**"
 metadata: 
   node_type: memory
   type: user
@@ -69,7 +69,7 @@ Tested directly: hold equal-weight top-K SPY mega-caps by real market cap, rebal
 
 These three lenses together imply that **the V3.3d/V3.4 family is more validated than the R3000 falsification suggests** — once the universe is matched to where passive flow operates, the characteristic signal IS an edge; what's still unproven is whether the rotation problem (counterfactual ≈ actual on R3000 but counterfactual > actual on SP500) means a fractional-overlay build is worthwhile or whether the SP500 OOS-2004 lift was itself cohort-specific. **The 17-month forward OOS test on rs_vol_screener showed: held variant lost to SPY (-1.27pp), but monthly-rebalance variant beat SPY (+19.67pp, Sharpe 1.143) — confirming rotation is needed to capture regime shifts (AI capex mega-caps came online via vol normalization Q2-Q3 2025).**
 
-### SPY_top_K variants study (2026-05-15 → 2026-05-16) — the synthesis
+### SPY_top_K variants study (2026-05-15 → 2026-05-16) — the synthesis (since RETRACTED)
 
 Four variants tested on top of the K=5 baseline (Sharpe 1.020, MDD −46%, CAGR +23.2% over 2010-2026):
 
@@ -82,18 +82,49 @@ Four variants tested on top of the K=5 baseline (Sharpe 1.020, MDD −46%, CAGR 
 
 **Entry-month sensitivity sub-cut: K=5 always-on beat SPY in 136/136 rolling 5y windows 2010-2021.** Median lift 1.43×, worst case 1.04× (still won). **Entry timing is a second-order question.**
 
-**The synthesis (unfalsified, not yet validated):** the three lenses operate at **different timescales**, not as competing portfolio signals:
+### Watchlist sleeve validation (2026-05-17) — the synthesis is FALSIFIED
+
+The two-sleeve "different timescales" synthesis from the 2026-05-16 SPY_top_K variants writeup was tested directly. Two studies, both converge to the same answer.
+
+**Study 1 — hold-once-selected rs_vol** (11 cohorts 2010-2020 year-ends, scan SP500-as-of-T with rs_3y > 0.50 ∧ vol_1y ∈ [0.25, 0.50], take top-K, hold equal-weight 5y/10y forward, no rebalance, liquidate-to-cash on delisting):
+
+| K | hold_y | watchlist CAGR | watchlist Sharpe | SPY-BH CAGR | SPY_top_5 CAGR | beats SPY-BH | beats SPY_top_5 |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 5 | 5 | +18.70% | 0.787 | +13.56% | +22.63% | 8/11 | 3/11 |
+| 10 | 10 | +20.39% | 0.816 | +14.33% | +23.65% | **10/11** | 3/11 |
+
+Watchlist clears SPY-BH across all K × horizon cells but loses to SPY_top_5 in 8-9/11 cohorts on CAGR and 0.18-0.33 below on Sharpe. The standout cohorts (2016/2017/2018) all had NVDA as top scorer (4.21/5.98/2.30) — the watchlist's alpha source is "future mega-cap names before they hit top-5 by market cap."
+
+**Study 2 — rank_hold_minhold hybrid** (re-run Variant C hybrid with rs_vol K=10 sleeve forced to minhold ∈ {6, 12, 24} months, blends 60/40, 70/30, 80/20):
+
+| Sleeve | 60/40 Sharpe | 70/30 Sharpe | 80/20 Sharpe |
+|---|---:|---:|---:|
+| no-minhold (Variant C) | 0.921 | 0.952 | 0.974 |
+| **minhold=6** | 0.936 | 0.963 | **0.982** |
+| minhold=12 | 0.913 | 0.945 | 0.970 |
+| minhold=24 | 0.918 | 0.950 | 0.974 |
+
+**Best hybrid (80/20, minhold=6) Sharpe 0.982 — still below SPY_top_3 alone (0.997) AND SPY_top_5 alone (1.021).** minhold=6 IS the locally-optimal cadence for the standalone rs_vol sleeve (Sharpe 0.626 → 0.660, MaxDD −51% → −43%) but the improvement isn't enough to close the structural gap to mega-cap concentration.
+
+**Conclusion: the dual-sleeve recommendation is FALSIFIED.** No (minhold, blend_ratio) pair beats SPY_top_5. The "different timescales should compose" intuition doesn't survive when the secondary sleeve has a 0.04+ Sharpe gap to the primary — blending dilutes monotonically toward the weaker. Writeup: `docs/studies/2026-05-16-watchlist-sleeve-validation.md`.
+
+### Revised recommendation (2026-05-17)
 
 | Bucket | Strategy | Timescale | Status |
 |---|---|---|---|
-| Active equity sleeve (lens 3 dominant) | SPY_top_5 monthly-rebal (K=3 for lower DD) | Months → years | ✅ shipped, validated 136/136 |
-| Watchlist / multi-year holds (lens 2 dominant) | rs_vol_screener cohort, hold 3-5+ years per name | Years | ⚠️ signal validated cohort-level, allocation discipline UNVALIDATED in this form |
-| Sentiment/news overlay (lens 1 dominant) | V3.3c — unbuilt | TBD | TBD |
+| **Active equity sleeve** | SPY_top_5 monthly-rebal (K=3 for lower DD) | Months → years | ✅ shipped, validated 136/136 |
+| ~~Watchlist parallel sleeve~~ | ~~rs_vol_screener, 3-5y holds, blended 30%~~ | — | ❌ **FALSIFIED 2026-05-17** |
+| Sentiment/news overlay (lens 1) | V3.3c — unbuilt | TBD | TBD |
 
-**The mixing layer should be capital allocation, not portfolio rotation.** Variant C's 70/30 monthly-rotated blend failed because both sleeves rotated at the same cadence; SPY_top_5 dominates anything mixed in at that timescale. The honest hybrid is **70% capital to monthly-rotation sleeve + 30% capital to frozen watchlist held 3-5+ years**.
+**Practical recommendation as of 2026-05-17:** for new capital → **100% SPY_top_5 monthly-rebal** (NVDA + AAPL + MSFT + GOOGL + AMZN equal-weight; lump-sum entry per Variant D). **No parallel rs_vol sleeve.** The watchlist (`tt scan rs_vol_screener`) remains as qualitative human-decision-support and as a feed for future strategies (e.g. a graduation overlay that adds rs_vol passers to SPY_top_K's candidate pool as they approach mega-cap threshold).
 
-**Practical recommendation as of 2026-05-16 (pending Study 1 validation):** for new capital → 70% lump-sum into K=5 monthly-rebal (NVDA/GOOGL/AAPL/MSFT/AMZN equal-weight); 30% into a frozen basket of top-10 non-mega-cap rs_vol watchlist names bought once (current top: LRCX/KLAC/JBL/PWR/NRG/CAT/MPWR/TRGP/AMAT/GE — note 6/10 are semis, sector-diversify before deploying).
+The watchlist isn't dead — Study 1 confirms it picks NVDA-like future winners before they hit mega-cap. The signal is real. But the right operational shape for it is NOT a fixed-percentage parallel sleeve in a systematic portfolio:
+- (a) **Graduation feed.** Names that pass rs_vol AND have ≥$50B cap could be added to SPY_top_K's universe. Requires a separate study.
+- (b) **Single-name conviction trade.** Top-3 watchlist names as candidates for an outside-the-systematic-book conviction long. Sized small, held long. Doesn't appear in systematic Sharpe accounting.
+- (c) **Decision-support qualitative tag.** Just read `tt scan` output; don't auto-trade it.
 
-**Open hole:** the watchlist-sleeve thesis is unfalsified, not validated. Next session's Study 1 (hold-once-selected rs_vol over 11 cohorts 2010-2020, 5y forward each) is the falsification test — if rs_vol-hold-5y beats SPY-BH on aggregate, ship the dual-sleeve allocation; if not, SPY_top_5 alone wins. Kickoff at `journal/next-session-watchlist-sleeve-validation-kickoff.md`.
+What the watchlist should NOT be: a fixed-percentage second sleeve. The portfolio math doesn't work.
+
+**Lens-3 (passive-flow / mega-cap concentration) is now confirmed as the dominant lens for active equity allocation** — every attempt to layer lens-2 (vol-band quality) on top has made things worse (Variant C 2026-05-16, Study 2 2026-05-17). Lens-2 still has interpretive value (helps explain *why* SPY_top_5 works — passive-flow-recipient mega-caps are also high-quality extractors) but not portfolio-allocation value as a separate sleeve.
 
 See [[project_trading_v3_scope_pending]] and [[project_tastytrade_options_account]] and [[feedback_trading_benchmark_spy_bh]].
