@@ -127,4 +127,19 @@ What the watchlist should NOT be: a fixed-percentage second sleeve. The portfoli
 
 **Lens-3 (passive-flow / mega-cap concentration) is now confirmed as the dominant lens for active equity allocation** — every attempt to layer lens-2 (vol-band quality) on top has made things worse (Variant C 2026-05-16, Study 2 2026-05-17). Lens-2 still has interpretive value (helps explain *why* SPY_top_5 works — passive-flow-recipient mega-caps are also high-quality extractors) but not portfolio-allocation value as a separate sleeve.
 
-See [[project_trading_v3_scope_pending]] and [[project_tastytrade_options_account]] and [[feedback_trading_benchmark_spy_bh]].
+### Vol-conditioned leverage on SPY_top_5 (2026-05-18) — Thread 4 of edge-discovery roadmap
+
+Tested whether leveraging SPY_top_5 amplifies the existing edge. Full study at [[project_levered_spy_top5_study_2026-05-18]].
+
+**Key finding: constant-leverage on always-on K=5 is impossible inside any reasonable DD ceiling (-45% gate breached at L=1.0 because unlevered baseline is already at -46% on 2001-2026). But VOL-CONDITIONED leverage works — Arm C with target_vol=0.20-0.25 produces CAGR 25-31% AT SIMILAR-OR-HIGHER Sharpe than the unlevered baseline.**
+
+**3 deployment options on the table:**
+- Conservative: target_vol=0.15 → CAGR 20.3%, Sharpe 1.21, MaxDD -22.6% (avg L 0.90× — mostly delevered)
+- Balanced: target_vol=0.20 → CAGR 25.6%, Sharpe 1.17, MaxDD -29.9% (avg L 1.17×)
+- Aggressive: target_vol=0.25, cap=2.5 → CAGR 31.2%, Sharpe 1.14, MaxDD -39.5% (avg L ~1.30×, clears all deploy-ready thresholds)
+
+**Reframing of "lever the strategy up":** the literal answer (constant leverage) doesn't work. The real answer is vol-CONDITIONED leverage — auto-cuts in vol spikes, levers in calm regimes. This is now the active-strategy ceiling for the levered case. The unlevered SPY_top_5 monthly-rebal recommendation from 2026-05-17 remains the conservative default; the Balanced or Aggressive vol-targeted variants are the higher-CAGR options if Scott chooses to deploy leverage.
+
+**AU CGT NOT modelled** — monthly rebal × high turnover means real after-tax CAGR materially below gross. Flag in any deployment conversation.
+
+See [[project_trading_v3_scope_pending]] and [[project_tastytrade_options_account]] and [[feedback_trading_benchmark_spy_bh]] and [[project_levered_spy_top5_study_2026-05-18]].
