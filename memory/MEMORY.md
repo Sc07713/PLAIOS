@@ -1,5 +1,6 @@
 # PLAIOS Memory Index
 
+- [Cleveland Fed nowcast data source](reference_cleveland_fed_nowcast_data.md) — free vintage-correct macro consensus (CPI/PCE nowcasts) via JSON endpoints + FRED ALFRED for release dates; history from 2013-07
 - [Brother scanner workflow](reference_brother_scanner_workflow.md) — MFC-L3770CDW; no scan app on PC → drive WIA from PowerShell to Pictures; Pillow for image→PDF (rotate + combine)
 - [PocketSmith — Mina approved, ready to sign up](project_pocketsmith_mina_approval.md) — Mina onboard 2026-04-17; Scott = primary, Mina = Advisor access
 - [Wulfric doing daily boxing](project_wulfric_boxing.md) — No longer co-training with Scott on LPP; boxing every day as of mid-Apr 2026
