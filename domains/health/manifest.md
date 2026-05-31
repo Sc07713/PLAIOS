@@ -10,7 +10,8 @@
 ## On-Demand Reference
 | File | Summary | Lines | Load When |
 |------|---------|-------|-----------|
-| reference/training-program-lpp-v5.4.md | Full LPP v5.3 program — weekly split, all exercises, sets/reps, VO2 max protocol, core circuit, equipment | ~400 | "What's today's workout?", specific session details, exercise form cues |
+| reference/training-program-lean-athlete-v6.0.md | **CURRENT** — Lean Athlete v6.0: basketball overlay on longevity base, lean legs / hypertrophied upper, "earn it" tiered week (3–4 day BASE + earned days), 3-system conditioning, illness re-entry ramp | ~260 | "What's today's workout?", session details, exercise form cues |
+| reference/training-program-lpp-v5.4.md | ARCHIVED — prior longevity-first LPP (superseded by v6.0) | ~400 | Historical reference only |
 | reference/training-methodology.md | Mentzer HIT-hybrid, dual-mode system, progressive overload, evidence tables | ~120 | Workout planning, training questions, programme design |
 | reference/nutrition.md | Protein architecture, IF protocol, supplement framework, family nutrition, cycling | ~150 | Nutrition questions, meal planning, supplement decisions |
 | reference/medical-advisory.md | Scope of practice, referral triggers, per-family-member medical awareness, Australian healthcare | ~100 | Medical appointments, health decisions, injury assessment |
