@@ -1,9 +1,11 @@
-# LEAN ATHLETE v6.2
+# LEAN ATHLETE v6.3
 ### Strength · Hypertrophy · Conditioning · Basketball — Scott — May 2026
 
-> Supersedes LPP v5.4. Basketball-performance overlay on a longevity base, with an explicit aesthetic split: **lean/powerful legs, hypertrophied upper body.** v6.1 incorporated a Codex + Gemini review; **v6.2 is adherence-hardened from a 5-model "virtual Scott" simulation + a movement ROI index** (see `v6-movement-index-and-simulation.md` and `journal/decisions/2026-05-31-lean-athlete-v6-review.md`).
+> ⚠️ **SUPERSEDED 2026-06-01 by `training-program-lean-athlete-v7.md` (v7.2).** v7 moved to a 4-goal aesthetics-led weighting (Aesthetics 40 / Longevity 20 / Basketball 20 / Mobility 20) via a growth-simulation pipeline. This v6 file is retained for history. v6.3's equal-weight (3-goal) logic below is still sound but no longer the active program.
 
-> **The headline lesson from the simulation:** the 4-day base survives; the "earned" days get skipped ~75% of the time; and the highest-ROI, injury-preventing work (soleus/calf, adductor, anti-rotation) was stranded on the skipped days — which is exactly where the simulated calf injury came from. v6.2 fixes that.
+> Supersedes LPP v5.4. Basketball-performance overlay on a longevity base, with an explicit aesthetic split: **lean/powerful legs, hypertrophied upper body.** v6.1 incorporated a Codex + Gemini review; v6.2 was adherence-hardened from a 5-model "virtual Scott" simulation + a movement ROI index; **v6.3 is value-optimised from an equal-weight (33/33/33) cross-domain combination simulation** (see `v6-value-combination-sim-equal-weights.md`, `v6-movement-index-and-simulation.md`, `journal/decisions/2026-05-31-training-value-optimisation.md`).
+
+> **The headline lesson from the value sim:** the two highest value-per-minute movements in the whole program — loaded **Carries** and **DB Row** — were stranded on the always-skipped bonus Thursday (the *same* pathology v6.2 caught with the armor). v6.3 folds them onto the protected Tuesday, turning Push → **Upper**, so the aesthetic floor (Scott's top lever) no longer depends on a day that gets skipped.
 
 ---
 
@@ -25,10 +27,11 @@
 
 **The 4-day base IS the program. You succeed at 90%+ by hitting four days. The rest is a pure bonus you can never "fail."** The simulation showed the guilt of missing "earned" days every week is the #1 quit risk — so the bonus carries zero failure weight. Hit it when flush, ignore it when not, no scorekeeping.
 
-**Week level**
-- **THE PROGRAM (4 days):** Sun Run · Mon Lower · Tue Push · Wed Game. Hitting these = a successful week, full stop.
-- **BONUS (zero-guilt, only on genuine surplus):** Thu 20-min Pull anchor · Fri 20-min upper pump · Sat opportunistic shooting.
-- **Armor moved off the skipped day:** the non-negotiable injury-prevention work (soleus/calf, adductor, anti-rotation) is **folded into Mon Lower** — a protected day — not parked on Thursday. The work that prevents the calf strain now rides on a day you actually do.
+**Week level — mnemonic: RUN · LOWER · UPPER · GAME = the week.**
+- **THE PROGRAM (4 days):** Sun Run · Mon Lower · Tue **Upper** · Wed Game. Hitting these = a successful week, full stop.
+- **ACCELERATOR (zero-guilt, only on genuine surplus):** Fri upper pump = **the aesthetic accelerator** (the weekly volume that builds the V-taper — your top lever) · Thu pull micro · Sat opportunistic shooting.
+- **Best-value work moved off the skipped day (v6.3):** the two highest value-per-minute movements — **DB Row + a loaded Carry** — migrate off bonus Thursday onto **protected Tuesday Upper.** So the aesthetic floor happens even on a 4-day week instead of riding a day that gets skipped.
+- **Armor on a protected day (v6.2, validated by v6.3):** the non-negotiable injury-prevention work (soleus/calf, adductor, anti-rotation) stays **folded into Mon Lower.** The combination sim scored its *offensive* value near-zero — which is exactly *why* it gets skipped — so it's protected as **high-priority insurance**, never its own block. Its value is preventing the missed weeks a calf/groin strain costs, which the value math can't see.
 
 **Set level**
 - **Upper (size goal):** 3 sets, last to failure, double progression (3×~6; hit 6 on last set → add load; climb until you can't hit 6).
@@ -52,15 +55,15 @@ Rest is auto-regulated via sleep + flexing to energy. No fixed rest day; Sat is 
 |-----|---------|------|--------|
 | **Sun @ Keilor** | Running — acceleration sprints (fresh) + aerobic intervals | **PROGRAM** | Audrey reps |
 | **Mon** | Lower — jumps + leg strength (RIR, explosive) + **armor block** + decel | **PROGRAM** | — |
-| **Tue** | Push (chest/shoulders/triceps, to failure) | **PROGRAM** | Audrey trains |
+| **Tue** | **Upper** — push (to failure) + **DB Row + loaded Carry** | **PROGRAM** | Audrey trains |
 | **Wed** | Basketball game (dynamic warm-up + ankle prep first) | **PROGRAM** | — |
-| **Thu** | 20-min Pull anchor (one block) | bonus | — |
-| **Fri** | 20-min upper pump + shoot at games | bonus | Girls' games (night) |
-| **Sat** | Opportunistic shooting + post-up + light COD | bonus | Both girls' games (AM) |
+| **Thu** | Pull micro (zero-guilt — load-bearing pull already done Tue) | accel. | — |
+| **Fri** | **Aesthetic accelerator** — upper pump (V-taper volume) + shoot at games | accel. | Girls' games (night) |
+| **Sat** | Opportunistic shooting + post-up + light COD | accel. | Both girls' games (AM) |
 
-**Hitting the 4 PROGRAM days = a successful week.** The 3 bonus days carry zero failure weight.
+**Hitting the 4 PROGRAM days = a successful week.** The 3 accelerator days carry zero failure weight — but Friday is named for what it does: it's the session that moves the *look* (top lever) fastest, so reach for it first when flush.
 
-**Lower-body hard exposures:** Mon (strength+jumps) + Wed (game), spaced 48 h. Sun running is moderate. Sprints land on the freshest day relative to the game (3 days either side). Thu loads only the upper body — the lower body recovers from the game.
+**Lower-body hard exposures:** Mon (strength+jumps) + Wed (game), spaced 48 h. Sun running is moderate. Sprints land on the freshest day relative to the game (3 days either side). **Tue Upper loads only upper/back/trunk** — no fresh eccentric leg stress, so it doesn't break Mon-lower→Wed-game High-Low spacing (Gemini 95%). Guardrail (Codex): keep Tue ~45–55 min — row 3–4 hard sets, carry 4–8 total, suitcase/offset rotation; don't tax the grip/feet Wed's game needs.
 
 ---
 
@@ -111,9 +114,15 @@ Order: prep → jumps (fresh) → strength → tissue/decel.
 
 ---
 
-## TUE — PUSH (to failure — size goal)
+## TUE — UPPER (push to failure + protected pull/carry — v6.3)
 
-Incline DB Press 3×6 · Lateral Raise 3×15–20 · Reverse Press 2×6 · Skull Crusher→Reverse-Press flow (not standalone heavy skull crushers — sim flagged elbow tweaks). **DB OHP optional** (incline press already covers front delts; add only if shoulders are fresh). Legs rest before Wed game.
+The value sim made this an **Upper** day, not push-only: it folds in the two highest value-per-minute movements in the program (DB Row, loaded Carry) so the aesthetic floor stops depending on the skipped Thursday. Push to failure (size goal); pull at RIR; carry as a short heavy finish. ~45–55 min.
+
+**Push (to failure):** Incline DB Press 3×6 · Lateral Raise 3×15–20 · Skull Crusher→Reverse-Press flow (not standalone heavy skull crushers — sim flagged elbow tweaks). **DB OHP optional** (incline press already covers front delts; add only if shoulders are fresh).
+**Pull (protected — the v6.3 add):** DB Row 3–4 hard sets · (Chin-up/Pull-up if a bar's handy — chin-up grip adds the arm/aesthetic the sim credited).
+**Carry finish:** 4–8 total loaded carries (suitcase/offset rotation, not always max farmer) — grip + trunk + traps, stop before form degrades.
+
+Legs rest before Wed game. **Guardrail:** keep total ~45–55 min and don't tax grip/feet — Wed's game needs them fresh.
 
 > **Intensity rule (all 5 sims confirmed):** the first week you feel *great* is your highest-risk week — that's when you overreach and tweak a shoulder/elbow or strain a calf. When you feel good, add ONE notch (a little load or one set), not three. Earn the jump.
 
@@ -125,21 +134,23 @@ Incline DB Press 3×6 · Lateral Raise 3×15–20 · Reverse Press 2×6 · Skull
 
 ---
 
-## THU — BONUS: 20-MIN PULL ANCHOR (zero-guilt)
+## THU — ACCELERATOR: PULL MICRO (zero-guilt, genuinely droppable)
 
-Rebuilt for v6.2. The sim killed the old "Pull + Core" because it asked for *two decisions* at 5 AM on the most depleted morning — so it got skipped every week. Now it's **one named block, one decision, ~20 min:**
+**v6.3 made this truly optional.** The load-bearing pull (DB Row + Carry) moved to protected Tuesday, so Thursday is no longer carrying anything the week depends on — it's pure *extra* pull/shoulder-health volume for the aesthetics top-up. ~15 min, one decision:
 
-**Pull-ups → DB Row → finish with one carry + one med-ball rotational throw set.** That's it. Loads only the upper body (lower recovers from the game). Rear delt / hammer curls only if you're flush.
+**Pull-ups → Face pull (or rear delt) → one med-ball rotational throw set.** That's it. Loads only the upper body. Hammer curls only if you're flush.
 
-- If you skip it: **no guilt** — your week was already a success at 4 days. Core/adductor armor already happened Monday.
+- If you skip it: **zero guilt** — your week was a success at 4 days *and* the load-bearing pull already happened Tuesday. Core/adductor armor already happened Monday.
 - Optional easy Zone-2 15–20 min if you want it.
 
 ---
 
-## FRI — UPPER HYPERTROPHY (trimmed pump — earned)
+## FRI — THE AESTHETIC ACCELERATOR (upper hypertrophy volume — reach for it first)
+
+**v6.3 reframe.** The value sim's one blind spot (both reviewers flagged it): its coverage math prices the *2nd weekly hit* on a muscle at ≈0, but that repeated volume is exactly where V-taper/arm hypertrophy is built. Since **aesthetics is your top lever and the 4-day base serves it least**, this volume isn't "marginal bonus" — it's the session that moves the *look* fastest. Still zero-guilt for adherence, but of the three accelerator days, **reach for this one first.**
 
 ~35 min, realistic. 3×10–20, last to failure + optional drop:
-Incline DB Press · Lateral Raise · DB Row or Pullover · Rear Delt Fly · Lying Supinated Curl + Skull-Crusher→Reverse-Press superset. *(Add Incline Fly only if sleep + soreness are green.)* Then shoot at the girls' Friday-night games.
+Incline DB Press · Lateral Raise · DB Row or Pullover · Face Pull (or Rear Delt Fly) · Lying Supinated Curl + Skull-Crusher→Reverse-Press superset. *(Add Incline Fly only if sleep + soreness are green.)* Then shoot at the girls' Friday-night games.
 
 ---
 
@@ -182,7 +193,7 @@ Even if Thu/Fri/Sat never happen, the base covers: legs (Mon strength+jumps + Su
 
 ## FREQUENCY CHECK
 
-Base: Legs 2× lean (Mon + Sun run) · Push 1× (Tue) · Armor/core 1× (Mon) · Speed 1× (Sun/Mon) · Aerobic 1× (Sun) + game · Game 1× (Wed). Bonus adds: Pull (Thu) · Upper hypertrophy + extra push/pull (Fri) · COD + shooting (Sat).
+Base: Legs 2× lean (Mon + Sun run) · Push 1× (Tue) · **Pull 1× (Tue — DB Row + Carry, v6.3)** · Armor/core 1× (Mon) · Speed 1× (Sun/Mon) · Aerobic 1× (Sun) + game · Game 1× (Wed). Accelerator adds: extra Pull (Thu) · Upper hypertrophy volume (Fri) · COD + shooting (Sat). **v6.3 net:** the base now trains pull, not just push — so a 4-day week covers the full upper body, not half.
 
 ---
 
@@ -203,6 +214,7 @@ Have: DBs 21 kg · KBs 24 kg · flat + incline bench · plyo box · bike · trea
 
 ## VERSION HISTORY
 
+- **v6.3** (31 May 2026): Value-optimised from an equal-weight (33/33/33) cross-domain **combination simulation** (coverage model: which movement *combinations* add most L+A+B value accounting for overlap + time; Codex+Gemini validated the L/A/B scorecard first, then pressure-tested the conclusions). **(1)** Tue Push → **Tue Upper**: folded **DB Row + loaded Carry** (the two highest value-per-minute movements) off the always-skipped bonus Thursday onto a protected day — same fix v6.2 applied to the armor. The 4-day base now trains pull, not just push. **(2)** Friday relabelled **"the aesthetic accelerator"** — both reviewers flagged the model's blind spot (it prices repeated weekly volume at ≈0, but that volume *is* where V-taper hypertrophy is built); since aesthetics is the top lever and the base serves it least, Fri's volume is the look-driver, not marginal — reach for it first. **(3)** Thursday demoted to a genuinely-droppable pull micro (load-bearing pull now on Tue). **(4)** Armor confirmed as high-priority *insurance* micro-dose (its near-zero offensive value is *why* it's skipped → protect it), Mon, never its own block. **(5)** Scorecard adjustments: DB Row + Carries up (contact/grip transfer), Incline press/OHP down (L-inflation correction), added Chin-ups + Face pull, trimmed isolations. Study: `v6-value-combination-sim-equal-weights.md`. Decision: `journal/decisions/2026-05-31-training-value-optimisation.md`.
 - **v6.2** (31 May 2026): Adherence-hardened from a 5-model "virtual Scott" 12-week simulation + a movement ROI index. **(1)** Reframed: the **4-day base IS the program** (success at 90%); Thu/Fri/Sat are **zero-guilt bonus** (the "earned-day guilt tax" was the convergent #1 quit risk). **(2)** Injury-prevention **armor (soleus/calf, Copenhagen, Pallof) migrated off the always-skipped Thursday onto protected Mon Lower** — the index's highest-ROI work, and the source of the simulated calf strain. **(3)** Thursday rebuilt as a single 20-min Pull anchor (one decision, not "Pull+Core"). **(4)** Re-entry leg reps softened (Bulgarian 6–8 first month). **(5)** Added "feeling-good = highest-risk week" intensity rule (5/5 sims overreached on the first good week). **(6)** Standalone heavy skull crusher dropped (elbow), DB OHP made optional. **(7)** Lean-legs reframed as a nutrition-gated 18–24-week outcome; 10 PM sleep softened to a 7-hr target (was a quit-risk). Study: `v6-movement-index-and-simulation.md`.
 - **v6.1** (31 May 2026): Codex + Gemini convergent review applied. **(1)** Power/sprints moved OFF the post-game day to a fresh early-week slot (High-Low CNS spacing); old Thu "Power & Core" → Thu low day (pull + core + Zone-2). **(2)** 4×4 decoupled from leg lifting (Sun running vs Mon lower). **(3)** Lean-leg mechanism corrected: legs now 2–3 RIR / explosive / **not to failure** (failure reserved for upper); failure ≠ lean. **(4)** Added deceleration ladder, soleus calf, lateral-plane (Cossack/lateral lunge), eccentric hamstring (slider/Nordic). **(5)** Re-entry ramp made criteria-gated, no-failure-first-2-weeks, maintenance calories until recovery markers green. **(6)** Friday trimmed to a realistic ~35-min pump. **(7)** Base-day microdoses added so the floor delivers without the earned days. Kept (both reviewers endorsed): unilateral bias, skills-piggyback, Base/Rush/earn autoregulation.
 - **v6.0** (May 2026): First basketball-overlay reframe (lean legs / upper hypertrophy / earn-it week). Superseded same day by v6.1 after review.

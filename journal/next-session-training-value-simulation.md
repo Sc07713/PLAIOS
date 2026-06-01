@@ -1,5 +1,7 @@
 # Next session — training value-maximisation simulation
 
+> ✅ **EXECUTED 2026-05-31 → v6.3.** Deliverables: study `domains/health/reference/v6-value-combination-sim-equal-weights.md`, program `training-program-lean-athlete-v6.0.md` (now v6.3), decision `journal/decisions/2026-05-31-training-value-optimisation.md`. Headline: Tue Push→Upper (DB Row + Carry off skipped Thu onto a protected day); Fri = aesthetic accelerator; armor = insurance micro-dose; coverage≠adaptation caveat. This note retained for audit.
+
 **Queued:** 2026-05-31 · **Domain:** Health (L2.2 / L4.4)
 
 ## The ask (Scott's words)
